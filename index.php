@@ -18,6 +18,13 @@
             
             ->get('/admin','LoadPage','admin') 
             ->post('/admin/createpage','AdminController@createpage','createpage') 
+
+            ->get('/article/[*:slug][i:id]','LoadPage@frombdd','article') 
+
+            /* components */
+            ->get('/admin/components/add','LoadPage','addComponent') 
+
+            ->get('/logout','AuthController@logout','logout') 
             ->run();
 
 ?>

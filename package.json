@@ -1,0 +1,31 @@
+{
+  "dependencies": {
+    "@boxraiser/visual-editor": "^0.1.4",
+    "@tailwindcss/vite": "^4.1.18",
+    "tailwindcss": "^4.1.18"
+  },
+  "name": "clesh",
+  "version": "1.0.0",
+  "description": "ce projet est une structure de fichier adaptée pour des projets PHP avec du vanillajs c'est a dire sans framework. Il génère des pages html mais a aussi la partie API qui peut génère des json ou des morceaux de html. Il utilise altorouter pour gérer les routes (url)",
+  "main": "index.js",
+  "devDependencies": {
+    "vite": "^7.3.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AccroDev/clesh.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/AccroDev/clesh/issues"
+  },
+  "homepage": "https://github.com/AccroDev/clesh#readme"
+}

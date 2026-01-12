@@ -3,7 +3,7 @@
         'name' => 'structure-de-fichier/structure-de-fichier',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => 'bd53e154233e0ae39e94a9314cfaffc81817375c',
+        'reference' => '4c6d76d3a86f73cbaac278dc76478fc79303387c',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -22,7 +22,7 @@
         'structure-de-fichier/structure-de-fichier' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => 'bd53e154233e0ae39e94a9314cfaffc81817375c',
+            'reference' => '4c6d76d3a86f73cbaac278dc76478fc79303387c',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

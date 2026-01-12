@@ -24,11 +24,12 @@ class AuthController {
         $rq->execute([
             $nom, $password, $email, 1
         ]);
-
-        $_SESSION['nom'] = $nom;
-        $_SESSION['email'] = $email;
-        $_SESSION['password'] = $password;
-        $_SESSION['accreditation'] = 1;
+        $_SESSION['user'] = [];
+        $_SESSION['user']['id'] = $nom;
+        $_SESSION['user']['nom'] = $nom;
+        $_SESSION['user']['email'] = $email;
+        $_SESSION['user']['password'] = $password;
+        $_SESSION['user']['accreditation'] = 1;
         header("Location: /");
     }
 
@@ -53,12 +54,20 @@ class AuthController {
         if (!$user || empty($user)) {
             header("Location: /login?Error=true");
             return;
-        }
+        } 
+        
+        $_SESSION['user'] = [];
+        $_SESSION['user']['id'] = $user["id"];
+        $_SESSION['user']['nom'] = $user["name"];
+        $_SESSION['user']['email'] = $user["email"];
+        $_SESSION['user']['password'] = $user["password"];
+        $_SESSION['user']['accreditation'] = $user["accreditation"];
+        header("Location: /?success");
+    }
 
-        $_SESSION['nom'] = $user["name"];
-        $_SESSION['email'] = $user["email"];
-        $_SESSION['password'] = $user["password"];
-        $_SESSION['accreditation'] = $user["accreditation"];
+    public function logout()
+    {
+        session_destroy();
         header("Location: /");
     }
  

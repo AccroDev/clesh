@@ -32,14 +32,13 @@ class Router{
             $view= "LoadPage";
             $name = "e404";
         }
-        $explose = explode('@',$view ?? $match['target']);
-        
+        $explose = explode('@',$view ?? $match['target']);  
         $className = $explose[0];
         $methode = isset($explose[1]) ? $explose[1] : null; 
 
         $class = $this->vieuwPath . '\\'. (isset($className) ? $className : $view);
-        $instance = new $class($name ?? $match['name']);
-        isset($methode) && $methode ? $instance->$methode($name ?? $match['name']) : '';
+        $instance = new $class();
+        isset($methode) && $methode ? $instance->$methode($name ?? $match['name'],$match['params']??false) : $instance->load($name ?? $match['name']);
         return $this;  
     } 
 
