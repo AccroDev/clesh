@@ -10,23 +10,7 @@
 </head>
 
 <body class="">
-    <header>
-        <nav class="nav">
-            <ul>
-                <a href="/">Accueil</a>
-                <?php if (isset($_SESSION['user']) && !empty($_SESSION["user"])): ?>
-                    <a href="/admin">Admin</a>
-                    <a href="/signin">Profil</a>
-                    <a href="/admin/components/add">addComponent</a>
-                    <a href="/admin/pages/add">addPages</a>
-                    <a href="/logout">Deconnexion</a>
-                <?php else: ?>
-                    <a href="/signin">Inscription</a>
-                    <a href="/login">Login</a>
-                <?php endif ?>
-            </ul>
-        </nav>
-    </header>
+    <?php require("./Views/template/components/header.php");  ?> 
 
     <?php if (isset($isPreview)): ?>
         <div id="ve-components">
@@ -41,6 +25,7 @@
             <span class="btn-text font-medium">Modifier la page</span> 
         </aside>
     <?php endif; ?>
+    <?php require("./Views/template/components/header.php");  ?>  
     <script type="module" src="http://localhost:5173/script/app.js"></script>
 </body>
 

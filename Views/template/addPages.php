@@ -4,7 +4,7 @@ use Models\Getter;
 
     $pages = Getter::get("pages",[
         'structure_type' => 'group'
-    ])
+    ],true)
 ?>
 
 <div class="max-w-4xl mx-auto py-12 px-4">
@@ -75,11 +75,8 @@ use Models\Getter;
                         <select name="parent_group" id="parent_group"
                             class="min-w-50 px-4 py-2 rounded-lg border border-slate-300 bg-slate-50 focus:ring-2 focus:ring-indigo-500 outline-none">
                             <?php foreach ($pages as $items): ?>
-                                <option value=""><?= $items['path']  ?></option>
-                            <?php endforeach; ?> //$pages
-                            <option value="article">Articles (/article/)</option>
-                            <option value="formation">Formations (/formation/)</option>
-                            <option value="blog">Blog (/blog/)</option>
+                                <option value="<?= $items['path']  ?>"><?= $items['path']  ?></option>
+                            <?php endforeach; ?> 
                         </select>
                     </div>
                 </div>
