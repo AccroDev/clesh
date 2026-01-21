@@ -1,40 +1,81 @@
+import {
+    VisualEditor,
+    Text,
+    HTMLText,
+    Select,
+    Checkbox,
+    Color,
+    Number,
+    Range,
+    ImageUrl,
+    DatePicker,
+    Repeater,
+    Row,
+    Tabs,
+    Alignment,
+    TextAlign
+} from "@boxraiser/visual-editor";
 
-import { VisualEditor } from "@boxraiser/visual-editor";
-import { Text, HTMLText, Repeater, Row, Select } from "@boxraiser/visual-editor"; // selon ce que tu importes
-import components from "./components";
+export const editor = new VisualEditor({});
 
-export const editor = new VisualEditor({}); // instance globale
+const FIELD_MAP = {
+    'Text': Text,
+    'HTMLText': HTMLText,
+    'Select': Select,
+    'Checkbox': Checkbox,
+    'Color': Color,
+    'Repeater': Repeater,
+    'Row': Row,
+    'Number': Number,
+    'Range': Range,
+    'ImageUrl': ImageUrl,
+    'DatePicker': DatePicker,
+    'Tabs': Tabs,
+    'Alignment': Alignment,
+    'TextAlign': TextAlign
+};
 
-// Enregistrer tous les composants **une seule fois**
-editor.registerComponent('hero', {
-    title: 'Hero',
-    category: 'Banner',
-    fields: [
-        Text('title', { multiline: false }),
-        HTMLText('content'),
-        Repeater('buttons', {
-            title: 'Boutons',
-            addLabel: 'Add a new button',
-            fields: [
-                Row([
-                    Text('label', { label: 'Libellé', default: 'Call to action' }),
-                    Text('url', { label: 'Lien' }),
-                    Select('type', {
-                        default: 'primary',
-                        label: 'type',
-                        options: [
-                            { label: 'Primaire', value: 'primary' },
-                            { label: 'Secondaire', value: 'secondary' },
-                        ],
-                    }),
-                ])
-            ],
-        })
-    ],
-});
+function mapFields(fieldsJson) {
+    return fieldsJson.map(field => {
+        const FieldClass = FIELD_MAP[field.type];
+        if (!FieldClass) return null;
+
+        const { name, type, fields, ...options } = field;
+
+        // SI c'est un REPEATER, on doit mapper ses propres champs internes
+        if (type === 'Repeater' && fields) {
+            options.fields = mapFields(fields); // Appel récursif ici
+        }
+
+        // SI c'est une ROW, on fait pareil
+        if (type === 'Row' && fields) {
+            return FieldClass(mapFields(fields)); // Row prend juste un tableau d'instances
+        }
+
+        return FieldClass(name, options);
+    }).filter(f => f !== null);
+}
+
+async function registerComponent() {
+
+    try {
+        const response = await fetch('/admin/components/get', { method: 'POST' });
+
+        if (response.ok) {
+            const data = await response.json();
+            data.forEach((config) => {
+                editor.registerComponent(config.name, {
+                    title: config.title,
+                    category: config.category,
+                    fields: mapFields(config.fields)
+                });
+            });
+        }
+    } catch (error) {
+        console.error('Error fetching components:', error);
+    }
+}
+
+registerComponent();
 
 
-// Si tu as déjà enregistré des composants dans editorSetup
-Object.entries(components.components).forEach(([name, config]) => {
-    editor.registerComponent(name, config);
-});

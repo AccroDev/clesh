@@ -1,0 +1,21 @@
+[
+    {
+        "name": "members",
+        "type": "Repeater",
+        "label": "Liste des membres",
+        "collapsed": "fullname",
+        "fields": [
+            {
+                "name": "fullname",
+                "type": "Text",
+                "label": "Nom complet"
+            },
+            {
+                "name": "photo",
+                "type": "Image",
+                "label": "Photo de profil"
+            }
+        ],
+        "addLabel": "Ajouter un membre"
+    }
+]

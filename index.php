@@ -1,5 +1,4 @@
-<?php
-
+<?php 
       session_start();
       use Controllers\Router; 
 
@@ -23,8 +22,20 @@
 
             /* components */
             ->get('/admin/components/add','LoadPage','addComponent') 
+            ->get('/admin/pages/add','LoadPage','addPages') 
+            ->post('/admin/components/save','ComponentController@save','saveComponent') 
+            ->post('/admin/components/get','ComponentController@get','getComponent') 
 
+            
+            
             ->get('/logout','AuthController@logout','logout') 
+            
+            
+            ->post('/admin/pages/store','VisualEditorController@createpage','CreatePageCoponents') // create page
+            ->post('/admin/pages/update-content','VisualEditorController@UpdatePage','UpdatePage') // updata page or set content
+            ->get('/admin/pages/get-content','VisualEditorController@getContent','getContent') // get id content
+            ->post('/preview','VisualEditorController@showPreview','preview') //preview when is editing
+            ->get('/[*:url]', 'VisualEditorController@dynamic', 'dynamic_page')//load page
             ->run();
-
+            
 ?>

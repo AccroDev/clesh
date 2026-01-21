@@ -1,6 +1,7 @@
 <?php
 namespace Controllers;
 use AltoRouter;
+
 class Router{
     private $vieuwPath;    
     /**

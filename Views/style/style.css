@@ -5,6 +5,9 @@
     --color-primary: #2563eb;
 }
 
+@source "../template/*.php";
+@source "../template/**/*.php";
+
 /* composants perso */
 .btn {
     @apply px-4 py-2 rounded bg-primary text-white;

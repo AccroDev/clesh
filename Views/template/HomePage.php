@@ -1,3 +1,4 @@
+<h1>lorem</h1>
 <div class="trueNaire homePage"> 
     <div class="about container p-4 al-item-center mb-2"> 
         <div class="img m-3">
