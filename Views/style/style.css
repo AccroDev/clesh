@@ -1,14 +1,26 @@
+@source "../template/*.php";
+@source "../template/**/*.php";
+
 @import "tailwindcss";
 
-/* Configuration inline */
+@variant dark (&:where(.dark, .dark *));
+
 @theme {
-    --color-primary: #2563eb;
+    --color-primary: #ec6d13;
+    --color-background-light: #f8f7f6;
+    --color-background-dark: #221810;
+
+    --font-display: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+    --radius-default: 0.25rem;
+    --radius-lg: 0.5rem;
+    --radius-xl: 0.75rem;
+    --radius-full: 9999px;
 }
 
 @source "../template/*.php";
 @source "../template/**/*.php";
 
-/* composants perso */
 .btn {
-    @apply px-4 py-2 rounded bg-primary text-white;
+    @apply px-4 py-2 rounded-default bg-primary text-white;
 }

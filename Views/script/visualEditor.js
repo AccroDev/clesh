@@ -80,7 +80,7 @@ export async function openVisualEditor(pageId, initialContent) {
     const editorTag = document.createElement('visual-editor');
     editorTag.setAttribute('id', 'editor');
     editorTag.setAttribute('name', 'content');
-    editorTag.setAttribute('preview', 'http://localhost:8001/preview');
+    editorTag.setAttribute('preview', '/preview');
     editorTag.setAttribute('iconsUrl', '/assets/editor/[name].svg');
     editorTag.setAttribute('insertPosition', 'end');
     editorTag.setAttribute('value', initialContent);

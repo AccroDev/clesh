@@ -19,7 +19,7 @@ $router = new Router('Views/template');
         ->run();
 ```
 NB : ce router prend les templates ou page a charger dans le dossierque vous lui avait passer en parametre.
-par exemple pour cette route ''->get('/','/HomePage','HomePage')'' quand l'url sera '/' ça va charger la page 'HomePage.php' situé dans le dossier 'Views/template' qui a été passer en parametre du router quand on a instancier cette class
+par exemple pour cette route ''->get('/','/HomePage','HomePage')'' quand l'url sera '/' ça va charger la page 'HomePage.php' situé dans le dossier 'Views/template' qui a été passer en parametre du router quand on a instancier cette class nnn
 
 Mais nous avons le router pour les apis
 
