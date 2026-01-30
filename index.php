@@ -19,6 +19,7 @@
             ->post('/admin/createpage','AdminController@createpage','createpage') 
 
             ->get('/article/[*:slug][i:id]','LoadPage@frombdd','article') 
+            ->get('/profile','LoadPage','profile') 
 
             /* components */
             ->get('/admin/components/add','LoadPage','addComponent') 

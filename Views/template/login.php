@@ -1,16 +1,3 @@
-<!-- <main class="min-h-screen">
-    <form action="/api/login" method="post">
-        <div>
-            <input type="text" name="email" placeholder="email">
-        </div>
-        <div class="" style="margin: 12px;">
-            <input type="text" name="password" placeholder="password">
-        </div>
-        <button>Envoyer</button>
-    </form>
-</main> -->
-
-
 <!-- Main Content: Split Screen -->
 <main class="flex-grow flex items-center justify-center py-12 px-6">
     <div class="flex flex-col lg:flex-row max-w-[1100px] w-full bg-white dark:bg-[#2c1f15] rounded-xl overflow-hidden shadow-xl">
@@ -34,26 +21,26 @@
                 <!-- Auth Tabs -->
                 <div class="pb-6">
                     <div class="flex border-b border-[#e6e0db] dark:border-b-[#4a3a2d] gap-8">
-                        <a class="flex flex-col items-center justify-center border-b-[3px] border-b-primary text-primary pb-[13px] pt-4" href="#">
+                        <a href="/login" class="flex flex-col items-center justify-center border-b-[3px] border-b-primary text-primary pb-[13px] pt-4" href="#">
                             <p class="text-sm font-bold leading-normal tracking-[0.015em]">Login</p>
                         </a>
-                        <a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-[#897261] dark:text-[#b0a095] pb-[13px] pt-4 hover:text-[#181411] dark:hover:text-white transition-colors" href="/signin">
+                        <a href="/signin" class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-[#897261] dark:text-[#b0a095] pb-[13px] pt-4 hover:text-[#181411] dark:hover:text-white transition-colors" href="/signin">
                             <p class="text-sm font-bold leading-normal tracking-[0.015em]">Sign Up</p>
                         </a>
                     </div>
                 </div>
                 <!-- Login Form -->
-                <form class="space-y-4">
+                <form class="space-y-4" action="/api/login" method="post" >
                     <!-- Email Field -->
                     <div class="flex flex-col w-full">
                         <p class="text-[#181411] dark:text-[#e6e0db] text-sm font-medium leading-normal pb-2">Email Address</p>
-                        <input class="form-input flex w-full min-w-0 resize-none overflow-hidden rounded-lg text-[#181411] dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-[#e6e0db] dark:border-[#4a3a2d] bg-white dark:bg-[#1a120b] focus:border-primary h-12 placeholder:text-[#897261] p-[15px] text-base font-normal leading-normal" placeholder="hello@example.com" type="email" value="" />
+                        <input class="form-input flex w-full min-w-0 resize-none overflow-hidden rounded-lg text-[#181411] dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-[#e6e0db] dark:border-[#4a3a2d] bg-white dark:bg-[#1a120b] focus:border-primary h-12 placeholder:text-[#897261] p-[15px] text-base font-normal leading-normal" placeholder="hello@example.com" type="email" name="email" />
                     </div>
                     <!-- Password Field -->
                     <div class="flex flex-col w-full">
                         <p class="text-[#181411] dark:text-[#e6e0db] text-sm font-medium leading-normal pb-2">Password</p>
                         <div class="relative flex w-full items-stretch rounded-lg">
-                            <input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#181411] dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-[#e6e0db] dark:border-[#4a3a2d] bg-white dark:bg-[#1a120b] focus:border-primary h-12 placeholder:text-[#897261] p-[15px] pr-12 text-base font-normal leading-normal" placeholder="Enter your password" type="password" value="" />
+                            <input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#181411] dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-[#e6e0db] dark:border-[#4a3a2d] bg-white dark:bg-[#1a120b] focus:border-primary h-12 placeholder:text-[#897261] p-[15px] pr-12 text-base font-normal leading-normal" placeholder="Enter your password" type="password" name="password" />
                             <div class="absolute right-0 flex items-center h-full pr-4 text-[#897261] cursor-pointer hover:text-primary">
                                 <span class="material-symbols-outlined" style="font-size: 20px;">visibility</span>
                             </div>

@@ -44,9 +44,9 @@
                 </label>
             </div>
             <div class="flex items-center gap-4">
-                <button class="flex items-center gap-1 hover:text-primary transition-colors">
+                <a href="/profile" class="flex items-center gap-1 hover:text-primary transition-colors">
                     <span class="material-symbols-outlined">person</span>
-                </button>
+                </a>
                 <button class="relative flex items-center gap-1 hover:text-primary transition-colors">
                     <span class="material-symbols-outlined">shopping_cart</span>
                     <span class="absolute -top-1 -right-1 flex h-4 w-4 items-center justify-center rounded-full bg-primary text-[10px] text-white font-bold">2</span>

@@ -5,6 +5,7 @@ namespace Controllers;
 
 use Models\GetPdo;
 use Models\Getter;
+use Models\Setter;
 
 class AuthController {
     
@@ -19,10 +20,11 @@ class AuthController {
             return;
         }
 
-        $bdd = GetPdo::getpdo();
-        $rq = $bdd->prepare("INSERT INTO users (name,password,email,accreditation) VALUES (?,?,?,?)");
-        $rq->execute([
-            $nom, $password, $email, 1
+        $request=Setter::insert("users",[
+            "name"=>$nom,
+            "password"=>$password,
+            "email"=>$email,
+            "accreditation"=>1,
         ]);
         $_SESSION['user'] = [];
         $_SESSION['user']['id'] = $nom;
@@ -43,14 +45,14 @@ class AuthController {
             header("Location: /login?Error=true");
             return;
         }
+        //recuperation a la base de donnees
 
-        $bdd = GetPdo::getpdo();
-        $rq = $bdd->prepare("SELECT * FROM users WHERE email = ? AND password = ? ORDER BY id DESC Limit 1");
-        $rq->execute([
-            $email, $password
+        $user = Getter::get("users",[
+            "email" => $email,
+            "password" => $password,
         ]);
 
-        $user = $rq->fetch();
+
         if (!$user || empty($user)) {
             header("Location: /login?Error=true");
             return;
