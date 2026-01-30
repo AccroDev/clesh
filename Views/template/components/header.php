@@ -51,9 +51,9 @@
                     <span class="material-symbols-outlined">shopping_cart</span>
                     <span class="absolute -top-1 -right-1 flex h-4 w-4 items-center justify-center rounded-full bg-primary text-[10px] text-white font-bold">2</span>
                 </button>
-                <button class="hidden md:flex bg-primary text-white text-sm font-bold px-5 py-2 rounded-lg hover:bg-[#d45d0f] transition-all">
+                <a href="/login" class="hidden md:flex bg-primary text-white text-sm font-bold px-5 py-2 rounded-lg hover:bg-[#d45d0f] transition-all">
                     Login
-                </button>
+            </a>
             </div>
         </div>
     </div>
