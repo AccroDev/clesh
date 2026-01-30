@@ -18,7 +18,7 @@ const FIELD_MAP = {
     'Number': NumberField,
     'Range': Range,
     'ImageUrl': ImageUrl,
-    'Image': ImageUrl, // Support des deux noms au cas où
+    'Image': ImageUrl,
     'DatePicker': DatePicker,
     'Tabs': Tabs,
     'Alignment': Alignment,
@@ -135,7 +135,8 @@ export async function openVisualEditor(pageId, initialContent) {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
                 pageId,
-                content
+                content,
+                path: window.location.pathname
             })
         });
 

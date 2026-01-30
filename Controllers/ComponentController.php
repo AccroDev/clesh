@@ -13,8 +13,7 @@ class ComponentController {
         $name = $_POST['name'] ?? '';
         $title = $_POST['title'] ?? '';
         $category = $_POST['category'] ?? '';
-        $fields_json = $_POST['fields_json'] ?? ''; 
- 
+        $fields_json = $_POST['fields_json'] ?? '';   
         $stmt = Setter::insert('composant', [
             'name' => $name,
             'title' => $title,
@@ -23,7 +22,7 @@ class ComponentController {
             "Auth" => $_SESSION["user"]['id'], 
         ]); 
         // Rediriger ou afficher un message de succès
-        header('Location: /admin/components/add?success='. ($stmt ? 'true' : 'false')); 
+        header('Location: /admin/components?success='. ($stmt ? 'true' : 'false')); 
         exit();
     }
 

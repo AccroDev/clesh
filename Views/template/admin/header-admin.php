@@ -1,5 +1,5 @@
 <!-- Top Navigation Bar -->
-<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-solid border-[#f4f2f0] dark:border-[#3d2e21]">
+<header class="sticky top-0 z-50 bg-white dark:bg-background-dark/80 backdrop-blur-md border-b border-solid border-[#f4f2f0] dark:border-[#3d2e21]">
     <div class="max-w-[1280px] mx-auto flex items-center justify-between px-6 lg:px-10 py-4">
         <div class="flex items-center gap-12">
             <div class="flex items-center gap-3 text-primary">
@@ -13,7 +13,7 @@
             <nav class="hidden md:flex items-center gap-8">
                 <a class="text-[#181411] dark:text-[#f4f2f0] text-sm font-semibold hover:text-primary transition-colors" href="/">Home</a>
                 <a class="text-[#181411] dark:text-[#f4f2f0] text-sm font-semibold hover:text-primary transition-colors" href="#">Shop</a>
-                <a class="text-[#181411] dark:text-[#f4f2f0] text-sm font-semibold hover:text-primary transition-colors" href="/products">Products</a>
+                <a class="text-[#181411] dark:text-[#f4f2f0] text-sm font-semibold hover:text-primary transition-colors" href="#">Journal</a>
             </nav>
         </div>
         <div class="flex flex-1 justify-end items-center gap-6">
@@ -27,10 +27,10 @@
                 <a href="/profile" class="flex items-center gap-1 hover:text-primary transition-colors">
                     <span class="material-symbols-outlined">person</span>
                 </a>
-                <a href="/cart" class="relative flex items-center gap-1 hover:text-primary transition-colors">
+                <button class="relative flex items-center gap-1 hover:text-primary transition-colors">
                     <span class="material-symbols-outlined">shopping_cart</span>
                     <span class="absolute -top-1 -right-1 flex h-4 w-4 items-center justify-center rounded-full bg-primary text-[10px] text-white font-bold">2</span>
-</a>
+                </button>
                 <a href="/login" class="hidden md:flex bg-primary text-white text-sm font-bold px-5 py-2 rounded-lg hover:bg-[#d45d0f] transition-all">
                     Login
             </a>

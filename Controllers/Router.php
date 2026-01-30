@@ -4,6 +4,7 @@ use AltoRouter;
 
 class Router{
     private $vieuwPath;    
+    public $matchname;
     /**
      * router
      * cette class utilise AltoRouter comme routeur principal
@@ -38,6 +39,7 @@ class Router{
         $methode = isset($explose[1]) ? $explose[1] : null; 
 
         $class = $this->vieuwPath . '\\'. (isset($className) ? $className : $view);
+        $this->matchname = $match['name']; 
         $instance = new $class();
         isset($methode) && $methode ? $instance->$methode($name ?? $match['name'],$match['params']??false) : $instance->load($name ?? $match['name']);
         return $this;  

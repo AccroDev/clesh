@@ -30,7 +30,7 @@ class VisualEditorController
         }
     }
 
-    private function renderTemplate($block)
+    public static function renderTemplate($block)
     {
         $template = $block['_name'] ?? null;
         if ($template) {
@@ -79,7 +79,7 @@ class VisualEditorController
         if ($success) {
             echo json_encode([
                 'success' => true,
-                'redirect' => '/admin'
+                'redirect' => '/admin/'
             ]);
         } else {
             http_response_code(500);
@@ -94,7 +94,7 @@ class VisualEditorController
         $url = $params['url'] ?? '';
 
         // 1. Chercher la page dans la table "pages" par la route (accreditation)
-        $page = Getter::get('pages', ['path' => $url]);
+        $page = Getter::get('pages', ['path' => "/".$url]);
 
         if (!$page) {
             header("HTTP/1.0 404 Not Found");
@@ -155,7 +155,8 @@ class VisualEditorController
             exit;
         }
 
-        $success = Mutateur::update("pages", [
+        $table = explode("/",isset($data["path"]) ? $data["path"] : "/pages" )[1] === "product" ? "produits" : "pages";
+        $success = Mutateur::update($table, [
             'contenue' => $data['content'] 
         ], [
             'id' => $data['pageId']

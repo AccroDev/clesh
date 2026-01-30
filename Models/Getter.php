@@ -21,7 +21,7 @@ class Getter
         array $conditions = [],
         bool $fetchAll = false,
         string $fields = '*'
-    ): ?array {
+    ): array | false {
         try {
             $bdd = GetPdo::getpdo();
 
@@ -50,7 +50,34 @@ class Getter
                 : $stmt->fetch(PDO::FETCH_ASSOC);
 
         } catch (PDOException $e) {
-            return null;
+            return false;
         }
+    }
+
+    public static function getCart($cartId)
+    { 
+        $db = GetPdo::getpdo();  
+        $stmt = $db->prepare("
+            SELECT 
+                ci.product_id, 
+                ci.quantite, 
+                ci.prix_unitaire, 
+                p.nom, 
+                p.categorie, 
+                p.image, 
+                p.description,
+                (ci.quantite * ci.prix_unitaire) as sous_total
+            FROM cart_items ci
+            JOIN produits p ON ci.product_id = p.id
+            WHERE ci.cart_id = :cart_id");
+        $stmt->execute([":cart_id" => $cartId]); 
+        return $stmt->fetchAll(\PDO::FETCH_ASSOC);
+    } 
+    public static function calculateNewTotal($cartId) {
+        $bdd = GetPdo::getpdo();
+        $rq = $bdd->prepare("SELECT SUM(quantite * prix_unitaire) as total FROM cart_items WHERE cart_id = :id");
+        $rq->execute([':id' => $cartId]);
+        $result = $rq->fetch(PDO::FETCH_ASSOC); 
+        return $result['total'] ?? 0;
     }
 }

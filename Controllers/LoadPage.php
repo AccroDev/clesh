@@ -13,18 +13,24 @@ class LoadPage
         require 'Views/template/' . $name . '.php';
         $content = ob_get_clean();
 
+        $checkAdmin = explode("/",$name);
+        if ($checkAdmin[0] === 'admin') {
+            require("Views/layout_admin.php"); 
+            return;
+        }
+
         require("Views/layout.php");
     }
 
     public function frombdd($name, $params)
-    {
+    {  
         if (!isset($params) || !isset($params["id"])) {
             header("HTTP/1.0 404 Not Found");
-            echo "Article non trouvé";
+            echo "Article non trouvée";
             exit;
         }
-
-        $article = Getter::get('articles', [
+        $table = explode(".",$name)[0] === "products" ? "produits" : "pages";
+        $article = Getter::get($table, [
             'id' => $params['id']
         ]);
         if (!$article) {
@@ -33,6 +39,20 @@ class LoadPage
             exit;
         }
         $contenue = $article['contenue'];
+
+        
+        $json = file_get_contents('php://input');
+        $data = json_decode(!isset($contenue) || $contenue === "" ? "[]" : $contenue , true); 
+
+        if (is_array($data)) {
+            ob_start();
+            foreach ($data as $block) {
+                VisualEditorController::renderTemplate($block);
+            }
+            $content = ob_get_clean(); 
+            $page_id = $params['id'];
+            require_once __DIR__ . '/../Views/layout.php';
+        } 
     }
 
    
