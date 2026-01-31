@@ -21,7 +21,8 @@
             ->get('/add-to-cart','PanierController@addInCart','add.product') 
             ->get('/cart','LoadPage','ShoppingCart') 
             ->post('/cart/update','PanierController@update','cart.update') 
-
+            ->post('/cart/confirm','PanierController@confirm','cart.confirm') 
+            
 
             ->get('/admin','LoadPage','admin') 
             ->post('/admin/createpage','AdminController@createpage','createpage') 

@@ -32,7 +32,7 @@ class AuthController {
         $_SESSION['user']['email'] = $email;
         $_SESSION['user']['password'] = $password;
         $_SESSION['user']['accreditation'] = 1;
-        header("Location: /");
+        header("Location: /?success=true");
     }
 
 
@@ -64,7 +64,7 @@ class AuthController {
         $_SESSION['user']['email'] = $user["email"];
         $_SESSION['user']['password'] = $user["password"];
         $_SESSION['user']['accreditation'] = $user["accreditation"];
-        header("Location: /?success");
+        header("Location: /?success=true");
     }
 
     public function logout()

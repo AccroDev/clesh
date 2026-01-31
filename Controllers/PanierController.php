@@ -142,4 +142,25 @@ class PanierController{
             echo json_encode(['success' => false, 'message' => 'Erreur serveur']);
         }
     } 
+
+    public function confirm() 
+    {
+         $nom = $_POST["nom"];
+        $adresse = $_POST["adresse"];
+        $numero = $_POST["numero"];
+
+        if (!$nom || !$adresse || !$numero) {
+            header("Location: /commander?Error=true");
+            return;
+        }
+
+        $request=Mutateur::update("carts",[
+            "status"=>'ordered',
+            "nom"=>$nom,
+            "adresse"=>$adresse,
+            "numero"=>$numero,
+        ], ['status' => 'active','user_id' =>$_SESSION['user']['id']]);
+
+        header("Location: /?success=true");
+    }
 }

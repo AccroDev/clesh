@@ -111,10 +111,10 @@ $grandTotal = $subtotal + $shipping + $tax;
                         <p class="text-primary text-2xl font-black js_total_cart"><?= $devise . number_format($grandTotal, 2) ?></p>
                     </div>
                 </div>
-                <button class="w-full mt-4 flex items-center justify-center gap-2 cursor-pointer rounded-lg h-12 bg-primary text-white text-base font-bold hover:bg-opacity-90 transition-all shadow-lg shadow-primary/20 disabled:opacity-50 disabled:cursor-not-allowed" <?= $totalCount === 0 ? 'disabled' : '' ?>>
+                <a href="/commander" class="w-full mt-4 flex items-center justify-center gap-2 cursor-pointer rounded-lg h-12 bg-primary text-white text-base font-bold hover:bg-opacity-90 transition-all shadow-lg shadow-primary/20 disabled:opacity-50 disabled:cursor-not-allowed" <?= $totalCount === 0 ? 'disabled' : '' ?>>
                     <span>Proceed to Checkout</span>
                     <span class="material-symbols-outlined">arrow_forward</span>
-                </button>
+            </a>
                 <div class="mt-6 flex items-center justify-center gap-2 text-[#897261] dark:text-[#a59182] text-xs">
                     <span class="material-symbols-outlined text-[16px]">lock</span>
                     <span>Secure SSL Encrypted Checkout</span>

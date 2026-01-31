@@ -14,14 +14,14 @@ class Getter
      * @param array $conditions ['colonne' => 'valeur']
      * @param bool $fetchAll true = fetchAll | false = fetch
      * @param string $fields champs à récupérer
-     * @return array|null
+     * @return array|false
      */
     public static function get(
         string $table,
         array $conditions = [],
         bool $fetchAll = false,
         string $fields = '*'
-    ): array | false {
+    ) {
         try {
             $bdd = GetPdo::getpdo();
 

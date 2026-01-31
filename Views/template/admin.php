@@ -1,3 +1,12 @@
+ <?php
+
+use Models\Getter;
+
+ $paniers=Getter::get('carts',[],true);
+
+
+ ?>
+ 
  <div class="bg-background-light dark:bg-background-dark min-h-screen font-display">
      <div class="flex h-screen overflow-hidden">
          
@@ -96,30 +105,34 @@
                              </thead>
                              <tbody class="divide-y divide-[#e6e0db] dark:divide-white/10">
                                  <!-- Row 1 -->
+                             <?php foreach ($paniers as $panier):
+                                $user = Getter::get("users",['id'=>$panier['user_id']])
+                                ?>
                                  <tr class="hover:bg-background-light/30 dark:hover:bg-white/5 transition-colors">
-                                     <td class="px-6 py-4">
+                                 <td class="px-6 py-4">
                                          <div class="flex items-center gap-3">
                                              <div class="w-9 h-9 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold text-sm">JD</div>
                                              <div class="flex flex-col">
-                                                 <span class="text-[#181411] dark:text-white font-semibold text-sm">Jane Doe</span>
-                                                 <span class="text-xs text-[#897261]">ID: #ORD-9421</span>
+                                                 <span class="text-[#181411] dark:text-white font-semibold text-sm"><?= $user['name'] ?></span>
+                                                 <span class="text-xs text-[#897261]">ID: #ORD-<?= $panier['id'] ?></span>
                                              </div>
                                          </div>
                                      </td>
+                                   
                                      <td class="px-6 py-4">
                                          <div class="flex flex-col">
-                                             <span class="text-sm text-[#181411] dark:text-gray-300">jane.doe@example.com</span>
-                                             <span class="text-xs text-[#897261]">+1 (555) 000-1234</span>
+                                             <span class="text-sm text-[#181411] dark:text-gray-300"><?= $user['email'] ?></span>
+                                             <span class="text-xs text-[#897261]"><?= $panier['numero'] ?></span>
                                          </div>
                                      </td>
                                      <td class="px-6 py-4">
                                          <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-bold bg-[#fff3e0] text-[#e65100]">
                                              <span class="w-1.5 h-1.5 rounded-full bg-[#e65100] mr-2"></span>
-                                             Pending
+                                             <?= $panier['status'] ?>
                                          </span>
                                      </td>
                                      <td class="px-6 py-4">
-                                         <span class="text-sm text-[#181411] dark:text-gray-300">Oct 24, 2023</span>
+                                         <span class="text-sm text-[#181411] dark:text-gray-300"><?= $panier['created_at'] ?></span>
                                      </td>
                                      <td class="px-6 py-4 text-right">
                                          <div class="flex justify-end gap-2">
@@ -133,79 +146,7 @@
                                          </div>
                                      </td>
                                  </tr>
-                                 <!-- Row 2 -->
-                                 <tr class="hover:bg-background-light/30 dark:hover:bg-white/5 transition-colors">
-                                     <td class="px-6 py-4">
-                                         <div class="flex items-center gap-3">
-                                             <div class="w-9 h-9 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 font-bold text-sm">MS</div>
-                                             <div class="flex flex-col">
-                                                 <span class="text-[#181411] dark:text-white font-semibold text-sm">Michael Smith</span>
-                                                 <span class="text-xs text-[#897261]">ID: #ORD-9420</span>
-                                             </div>
-                                         </div>
-                                     </td>
-                                     <td class="px-6 py-4">
-                                         <div class="flex flex-col">
-                                             <span class="text-sm text-[#181411] dark:text-gray-300">m.smith@webmail.com</span>
-                                             <span class="text-xs text-[#897261]">+1 (555) 111-5678</span>
-                                         </div>
-                                     </td>
-                                     <td class="px-6 py-4">
-                                         <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-bold bg-[#e8f5e9] text-[#2e7d32]">
-                                             <span class="w-1.5 h-1.5 rounded-full bg-[#2e7d32] mr-2"></span>
-                                             Processed
-                                         </span>
-                                     </td>
-                                     <td class="px-6 py-4">
-                                         <span class="text-sm text-[#181411] dark:text-gray-300">Oct 23, 2023</span>
-                                     </td>
-                                     <td class="px-6 py-4 text-right">
-                                         <div class="flex justify-end gap-2">
-                                             <span class="text-xs font-medium text-[#897261] italic px-3 py-1.5">No actions needed</span>
-                                             <button class="p-1.5 text-[#e71008] hover:bg-[#e71008]/10 rounded transition-colors">
-                                                 <span class="material-symbols-outlined text-xl">delete</span>
-                                             </button>
-                                         </div>
-                                     </td>
-                                 </tr>
-                                 <!-- Row 3 -->
-                                 <tr class="hover:bg-background-light/30 dark:hover:bg-white/5 transition-colors">
-                                     <td class="px-6 py-4">
-                                         <div class="flex items-center gap-3">
-                                             <div class="w-9 h-9 rounded-full bg-purple-100 flex items-center justify-center text-purple-600 font-bold text-sm">AW</div>
-                                             <div class="flex flex-col">
-                                                 <span class="text-[#181411] dark:text-white font-semibold text-sm">Alice Wong</span>
-                                                 <span class="text-xs text-[#897261]">ID: #ORD-9419</span>
-                                             </div>
-                                         </div>
-                                     </td>
-                                     <td class="px-6 py-4">
-                                         <div class="flex flex-col">
-                                             <span class="text-sm text-[#181411] dark:text-gray-300">alice.w@agency.net</span>
-                                             <span class="text-xs text-[#897261]">+44 20 7946 0958</span>
-                                         </div>
-                                     </td>
-                                     <td class="px-6 py-4">
-                                         <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-bold bg-[#fff3e0] text-[#e65100]">
-                                             <span class="w-1.5 h-1.5 rounded-full bg-[#e65100] mr-2"></span>
-                                             Pending
-                                         </span>
-                                     </td>
-                                     <td class="px-6 py-4">
-                                         <span class="text-sm text-[#181411] dark:text-gray-300">Oct 23, 2023</span>
-                                     </td>
-                                     <td class="px-6 py-4 text-right">
-                                         <div class="flex justify-end gap-2">
-                                             <button class="flex items-center gap-1.5 px-3 py-1.5 bg-[#4caf50]/10 text-[#2e7d32] hover:bg-[#4caf50]/20 rounded text-xs font-bold transition-colors">
-                                                 <span class="material-symbols-outlined text-base leading-none">check_circle</span>
-                                                 Approve
-                                             </button>
-                                             <button class="p-1.5 text-[#e71008] hover:bg-[#e71008]/10 rounded transition-colors">
-                                                 <span class="material-symbols-outlined text-xl">delete</span>
-                                             </button>
-                                         </div>
-                                     </td>
-                                 </tr>
+                             <?php endforeach; ?>
                              </tbody>
                          </table>
                      </div>
