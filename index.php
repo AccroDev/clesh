@@ -37,7 +37,10 @@
 
             /* components */ 
             ->get('/admin/pages','LoadPage','admin/addPages') 
-            ->get('/admin/components','LoadPage','admin/components') // and add screen
+            ->get('/admin/components','LoadPage','admin/components')
+            ->get('/admin/orders','LoadPage','admin/orders')
+            ->get('/admin/orders/[i:id]','LoadPage','admin/OrderDetail')
+            ->get('/admin/customers','LoadPage','admin/customers')
             ->post('/admin/components/save','ComponentController@save','saveComponent') 
             ->post('/admin/components/get','ComponentController@get','getComponent')  
             

@@ -31,6 +31,7 @@ class PanierController{
                 "status" => "active",
                 "devise" => "$" 
             ]);
+            var_dump( $cartId);
         } else {
             $cartId = $cart['id'];
         }
@@ -57,11 +58,11 @@ class PanierController{
         exit();
     }
 
-    public static function getCartDetails($cartId = null)
+    public static function getCartDetails($cartId = null, $isAdmin = false)
     { 
         if (!isset($cartId) || $cartId === null) {
             $userId = $_SESSION["user"]['id'] ?? null; 
-            $activeCart = Getter::get("carts", ["user_id" => $userId, "status" => "active"]);
+            $activeCart = Getter::get("carts", $isAdmin === true ? ["user_id" => $userId, "status" => "active"] : []);
             if (!$activeCart) return null;
             
             $cartId = $activeCart['id'];

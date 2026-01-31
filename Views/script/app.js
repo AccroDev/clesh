@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             try {
                 updateBtnState("loading", "chargement des contenu")
-                const response = await fetch(`/admin/pages/get-content?id=${pageId}`);
+                const response = await fetch(`/admin/pages/get-content?id=${pageId}&path=${window.location.pathname}`);
                 const data = await response.json();
                 const initialContent = data.contenue || '[]';
 

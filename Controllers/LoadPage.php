@@ -7,7 +7,7 @@ use Models\Getter;
 class LoadPage
 {
 
-    public function load($name)
+    public function load($name, $params)
     {
         ob_start();
         require 'Views/template/' . $name . '.php';

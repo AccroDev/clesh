@@ -41,7 +41,7 @@ class Router{
         $class = $this->vieuwPath . '\\'. (isset($className) ? $className : $view);
         $this->matchname = $match['name']; 
         $instance = new $class();
-        isset($methode) && $methode ? $instance->$methode($name ?? $match['name'],$match['params']??false) : $instance->load($name ?? $match['name']);
+        isset($methode) && $methode ? $instance->$methode($name ?? $match['name'],$match['params']??false) : $instance->load($name ?? $match['name'],$match['params']??false);
         return $this;  
     } 
 

@@ -12,8 +12,8 @@
             </div>
             <nav class="hidden md:flex items-center gap-8">
                 <a class="text-[#181411] dark:text-[#f4f2f0] text-sm font-semibold hover:text-primary transition-colors" href="/">Home</a>
-                <a class="text-[#181411] dark:text-[#f4f2f0] text-sm font-semibold hover:text-primary transition-colors" href="#">Shop</a>
-                <a class="text-[#181411] dark:text-[#f4f2f0] text-sm font-semibold hover:text-primary transition-colors" href="#">Journal</a>
+                <a href="/products" class="text-[#181411] dark:text-[#f4f2f0] text-sm font-semibold hover:text-primary transition-colors"  >Products</a>
+                <a href="/apropos" class="text-[#181411] dark:text-[#f4f2f0] text-sm font-semibold hover:text-primary transition-colors">A propos</a>
             </nav>
         </div>
         <div class="flex flex-1 justify-end items-center gap-6">
@@ -27,10 +27,10 @@
                 <a href="/profile" class="flex items-center gap-1 hover:text-primary transition-colors">
                     <span class="material-symbols-outlined">person</span>
                 </a>
-                <button class="relative flex items-center gap-1 hover:text-primary transition-colors">
+                <a href="/cart" class="relative flex items-center gap-1 hover:text-primary transition-colors">
                     <span class="material-symbols-outlined">shopping_cart</span>
                     <span class="absolute -top-1 -right-1 flex h-4 w-4 items-center justify-center rounded-full bg-primary text-[10px] text-white font-bold">2</span>
-                </button>
+</a>
                 <a href="/login" class="hidden md:flex bg-primary text-white text-sm font-bold px-5 py-2 rounded-lg hover:bg-[#d45d0f] transition-all">
                     Login
             </a>

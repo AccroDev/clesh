@@ -142,21 +142,7 @@
                          </div>
                      </div>
                  <?php endforeach; ?>
-             </div>
-             <!-- Pagination -->
-             <div class="mt-12 flex justify-center items-center gap-2">
-                 <button class="flex items-center justify-center size-10 rounded-lg border border-[#f4f2f0] dark:border-white/10 hover:bg-primary/10 transition-colors">
-                     <span class="material-symbols-outlined">chevron_left</span>
-                 </button>
-                 <button class="size-10 rounded-lg bg-primary text-white font-bold">1</button>
-                 <button class="size-10 rounded-lg border border-[#f4f2f0] dark:border-white/10 hover:bg-primary/10 transition-colors">2</button>
-                 <button class="size-10 rounded-lg border border-[#f4f2f0] dark:border-white/10 hover:bg-primary/10 transition-colors">3</button>
-                 <span class="px-2 text-[#897261]">...</span>
-                 <button class="size-10 rounded-lg border border-[#f4f2f0] dark:border-white/10 hover:bg-primary/10 transition-colors">12</button>
-                 <button class="flex items-center justify-center size-10 rounded-lg border border-[#f4f2f0] dark:border-white/10 hover:bg-primary/10 transition-colors">
-                     <span class="material-symbols-outlined">chevron_right</span>
-                 </button>
-             </div>
+             </div> 
          </div>
      </div>
  </main>

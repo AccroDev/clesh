@@ -10,9 +10,9 @@ class Setter
      *
      * @param string $table
      * @param array $data  ['colonne' => 'valeur']
-     * @return bool
+     * @return bool | int
      */
-    public static function insert(string $table, array $data): bool
+    public static function insert(string $table, array $data)
     {
         try {
             $bdd = GetPdo::getpdo();

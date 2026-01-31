@@ -127,8 +127,8 @@ class VisualEditorController
             ]);
             return;
         };
-
-        $page = Getter::get("pages", ["id" => $_GET["id"]]);
+        $table = explode("/", isset($_GET["path"]) ? $_GET["path"] : "/" )[1] === "product" ? "produits" : "pages";
+        $page = Getter::get($table, ["id" => $_GET["id"]]);
 
         if ($page) {
             echo json_encode([
