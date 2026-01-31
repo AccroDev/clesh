@@ -32,7 +32,7 @@ class Setter
                 $stmt->bindValue(':' . $key, $value);
             }
 
-            return $stmt->execute();
+            return $stmt->execute() ? $bdd->lastInsertId() : false; 
 
         } catch (PDOException $e) {
             var_dump($e->getMessage());exit;
