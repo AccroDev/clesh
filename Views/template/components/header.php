@@ -1,9 +1,4 @@
-<?php 
-    $user = $_SESSION['user'];
-    $avatar = $user['avatar'] ?? null;
-    $initiale = strtoupper(substr($user['nom'] ?? 'U', 0, 1));
-?>
-<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-solid border-[#f4f2f0] dark:border-[#3d2e21]">
+ <header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-solid border-[#f4f2f0] dark:border-[#3d2e21]">
     <div class="max-w-[1280px] mx-auto flex items-center justify-between px-6 lg:px-10 py-4">
         <div class="flex items-center gap-12">
             <div class="flex items-center gap-3 text-primary">
@@ -33,7 +28,12 @@
                     <span class="absolute -top-1 -right-1 flex h-4 w-4 items-center justify-center rounded-full bg-primary text-[10px] text-white font-bold shadow-sm">2</span>
                 </a>
 
-                <?php if (isset($_SESSION['user'])): ?>
+                <?php if (isset($_SESSION['user'])):
+    $user = $_SESSION['user'];
+    $avatar = $user['avatar'] ?? null;
+    $initiale = strtoupper(substr($user['nom'] ?? 'U', 0, 1));
+?>
+ 
                     <a href="/profile" class="flex items-center gap-3 p-1 pr-3 rounded-md bg-gray-200 hover:bg-[#d45d0f transition-all border border-transparent hover:border-slate-100">
                        <?php if ($avatar && file_exists($_SERVER['DOCUMENT_ROOT'] . $avatar)): ?>
                             <img src="<?= $avatar ?>" 
