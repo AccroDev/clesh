@@ -48,6 +48,7 @@ $selectedItem = Getter::get("produits",isset($_GET["selected"])  ? [
             <?php require("Views/template/admin/ProductList.php");  ?>
         
         <div class="w-full lg:w-[320px] shrink-0 order-1 lg:order-1">
+            
             <?php if ($selectedItem): ?>
                 <div class="sticky top-8 bg-white dark:bg-[#1c140d] rounded-xl border border-[#e6e0db] dark:border-white/10 overflow-hidden shadow-sm">
                     <div class="h-48 bg-background-light dark:bg-background-dark relative">
@@ -56,12 +57,12 @@ $selectedItem = Getter::get("produits",isset($_GET["selected"])  ? [
                         </div>
                         
                         <div class="absolute top-3 right-3 flex gap-1">
-                            <button class="size-8 rounded-full bg-white/80 dark:bg-black/40 backdrop-blur-sm flex items-center justify-center text-[#181411] dark:text-white hover:text-primary transition-colors">
+                            <a href="/admin/product?edit=<?= isset($_GET['selected'])? $_GET['selected'] : null ?>" class="size-8 rounded-full bg-white/80 dark:bg-black/40 backdrop-blur-sm flex items-center justify-center text-[#181411] dark:text-white hover:text-primary transition-colors">
                                 <span class="material-symbols-outlined !text-sm">edit</span>
-                            </button>
-                            <button class="size-8 rounded-full bg-white/80 dark:bg-black/40 backdrop-blur-sm flex items-center justify-center text-red-600 hover:bg-red-50 transition-colors">
+                             </a>
+                            <a href="/admin/products/delete/<?= isset($_GET['selected'])? $_GET['selected'] : null ?>" class="size-8 rounded-full bg-white/80 dark:bg-black/40 backdrop-blur-sm flex items-center justify-center text-red-600 hover:bg-red-50 transition-colors">
                                 <span class="material-symbols-outlined !text-sm">delete</span>
-                            </button>
+                            </a>
                         </div>
                     </div>
 

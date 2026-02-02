@@ -4,6 +4,7 @@ namespace Controllers;
 
 use Exception;
 use Models\Getter;
+use Models\Mutateur;
 use Models\Setter;
 
 class ProductController
@@ -22,7 +23,7 @@ class ProductController
         $categorie = filter_input(INPUT_POST, 'categori', FILTER_SANITIZE_SPECIAL_CHARS);
         $prix = filter_input(INPUT_POST, 'prix', FILTER_VALIDATE_FLOAT);
         $devise = filter_input(INPUT_POST, 'devise', FILTER_SANITIZE_SPECIAL_CHARS);
-
+        $editItem = filter_input(INPUT_POST, 'editItem', FILTER_SANITIZE_SPECIAL_CHARS);
         // 2. Traitement de l'image
         $imagePath = 'default_product.jpg'; // Image par défaut
         if (isset($_FILES['image']) && $_FILES['image']['error'] === 0) {
@@ -50,14 +51,17 @@ class ProductController
             "description" => $description,
             "categorie"   => $categorie,
             "prix"        => $prix,
-            "devise"      => $devise,
-            "image"       => $imagePath, 
+            "devise"      => $devise, 
             "created_at"  => date('Y-m-d H:i:s')
         ];
 
+        if (isset($_FILES['image']) && $_FILES['image']['error'] === 0) {
+           $data["image"] = $imagePath;
+        }
+
         try {
             // Utilisation de ton Setter
-            $result = Setter::insert("produits", $data);
+            $result = isset($editItem) ? Mutateur::update("produits",$data,["id" => $editItem]) : Setter::insert("produits", $data);
 
             if ($result) {
                 header("Location: /admin/product?success=1");
@@ -86,4 +90,18 @@ class ProductController
         header("Location: " . $_SERVER['HTTP_REFERER']);
         exit();
     }
+
+    public function delete($name, $params)
+    {
+        $id = isset($params['id']) ? $params['id'] : null;
+        if (!$id) {
+            header("Location: /admin/product?error=id introuvable");
+            return;
+        }
+
+        Mutateur::delete("produits",(int) $id);
+        header('Location: /admin/product?success=true');
+    }
+
 }
+ 

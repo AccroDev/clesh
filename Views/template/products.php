@@ -1,9 +1,11 @@
  <?php
 
     use Controllers\ProductController;
-
-    $allProducts = ProductController::listProducts(); ?>
-
+  
+    $allProducts = ProductController::listProducts()??[]; 
+    $allProducts = $allProducts == null ? [] : $allProducts;
+    ?>
+      
  <main class="flex-grow max-w-400 mx-auto w-full px-6 md:px-20 lg:px-40 py-8">
      <!-- Breadcrumbs -->
      <nav class="flex flex-wrap gap-2 mb-6">

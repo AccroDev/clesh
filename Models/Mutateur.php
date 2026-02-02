@@ -53,4 +53,12 @@ class Mutateur
             return false;
         }
     }
+
+    public static function delete(string $table, int $id)
+    {
+        $bdd = GetPdo::getpdo();
+
+        $rq = $bdd->prepare("DELETE FROM " . $table . " WHERE id = ?");
+        $rq->execute([$id]);
+    }
 }

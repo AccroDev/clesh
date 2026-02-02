@@ -20,7 +20,7 @@ $devise = $details['devise'];
 $cartBase = Getter::get("carts", ["id" => $id]);
 ?>
 
-<main class="flex-1 flex justify-center py-8 px-4 md:px-10 lg:px-40">
+<main class="flex-1 flex justify-center py-8 px-4 md:px-10 ">
     <div class="layout-content-container flex flex-col max-w-[1120px] w-full gap-6">
         
         <nav class="flex flex-wrap items-center gap-2 px-4 py-2 bg-white/50 dark:bg-white/5 rounded-xl backdrop-blur-sm">

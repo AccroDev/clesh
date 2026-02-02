@@ -39,7 +39,7 @@
         <!-- SHOW NOTIFICATION OF ACTION  -->
     <?php 
         $success = $_GET['success'] ?? null;
-        $error = $_GET['error'] ?? null;
+        $error = $_GET['Error'] ?? null;
         if ($success || $error): 
         $type = $success ? 'success' : 'error';
         $message = $success ? "Opération réussie !" : htmlspecialchars($error);

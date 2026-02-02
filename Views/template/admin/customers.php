@@ -1,5 +1,6 @@
 <?php
 
+use Controllers\AuthController;
 use Models\Getter;
 
  $users = Getter::get("users",[],true); ?>
@@ -87,7 +88,7 @@ use Models\Getter;
                             <th class="px-6 py-4 text-xs font-bold uppercase tracking-wider text-[#897261]">Name</th>
                             <th class="px-6 py-4 text-xs font-bold uppercase tracking-wider text-[#897261]">Email</th>
                             <th class="px-6 py-4 text-xs font-bold uppercase tracking-wider text-[#897261]">Registration Date</th>
-                            <th class="px-6 py-4 text-xs font-bold uppercase tracking-wider text-[#897261]">Total Orders</th>
+                            <th class="px-6 py-4 text-xs font-bold uppercase tracking-wider text-[#897261]">Total rders</th>
                             <th class="px-6 py-4 text-xs font-bold uppercase tracking-wider text-[#897261] text-right">Actions</th>
                         </tr>
                     </thead>
@@ -95,10 +96,14 @@ use Models\Getter;
                         <?php foreach($users as $user ): ?>
                             <tr class="hover:bg-cream dark:hover:bg-white/5 transition-colors group">
                                 <td class="px-6 py-4">
-                                    <div class="flex items-center gap-3">
+                                    <a href="/admin/user/<?= $user['id'] ?>" class="flex items-center gap-3">
                                         <div class="size-9 rounded-full bg-cover bg-center" data-alt="Customer Jane Cooper avatar" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuChHUmL_i-TGx5c3k1rfkA7zI5ptuzaaIKpTbkLDRFbLyzx7ZqhYAaDPzBK_ydnT3PzgNs373R0mrZ2VZw7dceuKSToFbi1ufj28SIIPHwlC9hnCU8AiqX4TpC93IJYV7Z3-fsW4Oa19Pps3iEJWZ4mAOdaYOXZeDNiub2-tHOWH_aEbt-MsQQL2iNGWN7upDW9Q5d_bM1w4jl2yIZQgbAWAJiVRGianvWC0vxAoH17JVDnm7j4TnIHX0XBo0MazcvArWO0EOSnaUGT')"></div>
-                                        <span class="font-bold text-sm dark:text-white"><?= $user["name"] ?></span>
-                                    </div>
+                                        <div>
+
+                                            <span class="font-bold text-sm dark:text-white"><?= $user["name"] ?></span>
+                                            <span class="block" ><?= AuthController::getAccountType($user["accreditation"]) ?></span>
+                                        </div>
+                                    </a>
                                 </td>
                                 <td class="px-6 py-4 text-sm text-[#897261]"><?= $user["email"] ?></td>
                                 <td class="px-6 py-4 text-sm text-[#897261]">Oct 12, 2023</td>

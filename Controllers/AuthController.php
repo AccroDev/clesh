@@ -5,6 +5,7 @@ namespace Controllers;
 
 use Models\GetPdo;
 use Models\Getter;
+use Models\Mutateur;
 use Models\Setter;
 
 class AuthController {
@@ -71,6 +72,31 @@ class AuthController {
     {
         session_destroy();
         header("Location: /");
+    }
+    public function edit($name,$params )
+    {
+        $id = $params["id"];
+        $type = $_POST["account_type"];
+        Mutateur::update('users',['accreditation' =>$type ], ['id' => $id]);
+        header("Location: /admin/user/".$id . '?success=true');
+    }
+
+    public static function getAccountType($accredit)
+    {
+        switch ($accredit) {
+            case '1':
+               return "Standard";
+                break;
+            case '2':
+               return "Admin";
+                break;
+            case '3':
+               return "Super Admin";
+               break;
+            default:
+               return "Standard";
+                break;
+        };
     }
  
 }

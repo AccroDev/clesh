@@ -30,6 +30,7 @@
             ->get('/logout','AuthController@logout','logout') 
 
             ->get('/admin/product','LoadPage','admin/Products') 
+            ->get('/admin/products/delete/[i:id]','ProductController@delete','admin.Products.delete') 
             ->post('/admin/product/add','ProductController@addProduct','Products.add') 
             
             ->get('/product/[*:slug][i:id]','LoadPage@frombdd','products.details') 
@@ -40,8 +41,10 @@
             ->get('/admin/components','LoadPage','admin/components')
             ->get('/admin/orders','LoadPage','admin/orders')
             ->get('/admin/orders/[i:id]','LoadPage','admin/OrderDetail')
-            ->get('/admin/customers','LoadPage','admin/customers')
             ->post('/admin/components/save','ComponentController@save','saveComponent') 
+            ->get('/admin/customers','LoadPage','admin/customers')
+            ->get('/admin/user/[i:id]','LoadPage','admin/userdetail')
+            ->post('/admin/user/edit/[i:id]','AuthController@edit','admin.userdetai.edit')
             ->post('/admin/components/get','ComponentController@get','getComponent')  
             
             ->post('/admin/pages/store','VisualEditorController@createpage','CreatePageCoponents') // create page
