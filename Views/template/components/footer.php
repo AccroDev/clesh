@@ -8,10 +8,10 @@
                         <path d="M6 6H42L36 24L42 42H6L12 24L6 6Z"></path>
                     </svg>
                 </div>
-                <h2 class="text-[#181411] dark:text-white text-xl font-black tracking-tight uppercase">Minimalist</h2>
+                <h2 class="text-[#181411] dark:text-white text-xl font-black tracking-tight uppercase">DESIRE</h2>
             </div>
             <p class="text-[#897261] text-sm leading-relaxed">
-                Thoughtfully designed and ethically made goods for your home and lifestyle. Sustainability in every stitch.
+                Des articles conçus avec soin et fabriqués de manière éthique pour votre maison et votre style de vie. Le développement durable à chaque étape.
             </p>
             <div class="flex gap-4">
                 <a class="text-[#897261] hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">public</span></a>
@@ -20,37 +20,37 @@
             </div>
         </div>
         <div class="flex flex-col gap-6">
-            <h4 class="font-bold text-[#181411] dark:text-white uppercase tracking-wider text-xs">Shop</h4>
+            <h4 class="font-bold text-[#181411] dark:text-white uppercase tracking-wider text-xs">Boutique</h4>
             <ul class="flex flex-col gap-3 text-sm text-[#897261]">
-                <li><a class="hover:text-primary transition-colors" href="#">All Collections</a></li>
-                <li><a class="hover:text-primary transition-colors" href="#">Living Room</a></li>
-                <li><a class="hover:text-primary transition-colors" href="#">Kitchen &amp; Dining</a></li>
-                <li><a class="hover:text-primary transition-colors" href="#">Sustainable Living</a></li>
+                <li><a class="hover:text-primary transition-colors" href="#">toutes la collections</a></li>
+                <li><a class="hover:text-primary transition-colors" href="#">Salon</a></li>
+                <li><a class="hover:text-primary transition-colors" href="#">Cuisine &amp; À manger</a></li>
+                <li><a class="hover:text-primary transition-colors" href="#">Vie durable</a></li>
             </ul>
         </div>
         <div class="flex flex-col gap-6">
-            <h4 class="font-bold text-[#181411] dark:text-white uppercase tracking-wider text-xs">Customer Care</h4>
+            <h4 class="font-bold text-[#181411] dark:text-white uppercase tracking-wider text-xs">Service client</h4>
             <ul class="flex flex-col gap-3 text-sm text-[#897261]">
-                <li><a class="hover:text-primary transition-colors" href="#">Shipping Policy</a></li>
-                <li><a class="hover:text-primary transition-colors" href="#">Returns &amp; Exchanges</a></li>
-                <li><a class="hover:text-primary transition-colors" href="#">Contact Support</a></li>
+                <li><a class="hover:text-primary transition-colors" href="#">Politique d'expédition</a></li>
+                <li><a class="hover:text-primary transition-colors" href="#">Retours &amp; Échanges</a></li>
+                <li><a class="hover:text-primary transition-colors" href="#">Contacter l'assistance</a></li>
                 <li><a class="hover:text-primary transition-colors" href="#">FAQs</a></li>
             </ul>
         </div>
         <div class="flex flex-col gap-6">
-            <h4 class="font-bold text-[#181411] dark:text-white uppercase tracking-wider text-xs">Newsletter</h4>
-            <p class="text-xs text-[#897261]">Join our newsletter and receive 10% off your first order.</p>
+            <h4 class="font-bold text-[#181411] dark:text-white uppercase tracking-wider text-xs">Bulletin</h4>
+            <p class="text-xs text-[#897261]">Inscrivez-vous à notre newsletter et bénéficiez de 10 % de réduction sur votre première commande.</p>
             <form class="flex flex-col gap-3">
                 <input class="w-full bg-[#f4f2f0] dark:bg-[#3d2e21] border-none rounded-lg h-10 px-4 text-sm focus:ring-primary" placeholder="Email Address" type="email" />
-                <button class="bg-primary text-white text-sm font-bold h-10 rounded-lg hover:bg-[#d45d0f] transition-all">Subscribe</button>
+                <button class="bg-primary text-white text-sm font-bold h-10 rounded-lg hover:bg-[#d45d0f] transition-all">S'abonner</button>
             </form>
         </div>
     </div>
     <div class="max-w-[1280px] mx-auto mt-16 pt-8 border-t border-[#f4f2f0] dark:border-[#3d2e21] flex flex-col md:flex-row justify-between items-center gap-4">
-        <p class="text-[12px] text-[#897261]">© 2024 Minimalist E-commerce. All rights reserved.</p>
+        <p class="text-[12px] text-[#897261]">© 2026 E-commerce DESIER. Tous droits réservés.</p>
         <div class="flex gap-6 text-[12px] text-[#897261]">
-            <a class="hover:text-[#181411] dark:hover:text-white" href="#">Privacy Policy</a>
-            <a class="hover:text-[#181411] dark:hover:text-white" href="#">Terms of Service</a>
+            <a class="hover:text-[#181411] dark:hover:text-white" href="#">politique de confidentialité</a>
+            <a class="hover:text-[#181411] dark:hover:text-white" href="#">Conditions d'utilisation</a>
         </div>
     </div>
 </footer>

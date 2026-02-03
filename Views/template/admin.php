@@ -9,7 +9,7 @@
             <div class="bg-white dark:bg-background-dark p-6 rounded-xl border border-border-warm dark:border-white/5 shadow-sm group hover:shadow-md transition-shadow">
                 <div class="flex justify-between items-start mb-4">
                     <div>
-                        <p class="text-sm font-medium text-muted-warm">Total Sales</p>
+                        <p class="text-sm font-medium text-muted-warm">Ventes totales</p>
                         <h3 class="text-2xl font-bold mt-1">$54,230</h3>
                     </div>
                     <span class="p-2 bg-green-100 text-green-600 rounded-lg material-symbols-outlined">trending_up</span>
@@ -20,16 +20,16 @@
                         <path d="M0 35 Q 20 10, 40 25 T 80 5 T 100 15" fill="none" stroke="#22c55e" stroke-width="2"></path>
                     </svg>
                 </div>
-                <p class="text-xs font-bold text-green-600 mt-2">+12.5% <span class="text-muted-warm font-normal">from last month</span></p>
+                <p class="text-xs font-bold text-green-600 mt-2">+12.5% <span class="text-muted-warm font-normal">du mois dernier</span></p>
             </div>
             <!-- Active Users -->
             <div class="bg-white dark:bg-background-dark p-6 rounded-xl border border-border-warm dark:border-white/5 shadow-sm group hover:shadow-md transition-shadow">
                 <div class="flex justify-between items-start mb-4">
                     <div>
-                        <p class="text-sm font-medium text-muted-warm">Active Users</p>
+                        <p class="text-sm font-medium text-muted-warm">Utilisateurs actifs</p>
                         <h3 class="text-2xl font-bold mt-1">1,240</h3>
                     </div>
-                    <span class="p-2 bg-blue-100 text-blue-600 rounded-lg material-symbols-outlined">person</span>
+                    <span class="p-2 bg-blue-100 text-blue-600 rounded-lg material-symbols-outlined">personne</span>
                 </div>
                 <div class="flex items-center gap-1 mt-6">
                     <div class="flex -space-x-2">
@@ -37,15 +37,15 @@
                         <div class="w-6 h-6 rounded-full border-2 border-white bg-charcoal/20 flex items-center justify-center text-[8px] font-bold">AS</div>
                         <div class="w-6 h-6 rounded-full border-2 border-white bg-muted-warm/20 flex items-center justify-center text-[8px] font-bold">+5</div>
                     </div>
-                    <span class="text-xs text-muted-warm font-medium">Active now</span>
+                    <span class="text-xs text-muted-warm font-medium">Actif maintenant</span>
                 </div>
-                <p class="text-xs font-bold text-blue-600 mt-2">+5% <span class="text-muted-warm font-normal">than last week</span></p>
+                <p class="text-xs font-bold text-blue-600 mt-2">+5% <span class="text-muted-warm font-normal">que la semaine dernière</span></p>
             </div>
             <!-- New Orders -->
             <div class="bg-white dark:bg-background-dark p-6 rounded-xl border border-border-warm dark:border-white/5 shadow-sm group hover:shadow-md transition-shadow">
                 <div class="flex justify-between items-start mb-4">
                     <div>
-                        <p class="text-sm font-medium text-muted-warm">New Orders</p>
+                        <p class="text-sm font-medium text-muted-warm">Nouvelles commandes</p>
                         <h3 class="text-2xl font-bold mt-1">45</h3>
                     </div>
                     <span class="p-2 bg-orange-100 text-orange-600 rounded-lg material-symbols-outlined">shopping_cart</span>
@@ -53,13 +53,13 @@
                 <div class="w-full bg-background-light dark:bg-white/5 h-1.5 rounded-full mt-8">
                     <div class="bg-orange-500 h-full w-[65%] rounded-full"></div>
                 </div>
-                <p class="text-xs font-bold text-orange-600 mt-2">65% <span class="text-muted-warm font-normal">of daily goal</span></p>
+                <p class="text-xs font-bold text-orange-600 mt-2">65% <span class="text-muted-warm font-normal">objectif quotidien</span></p>
             </div>
             <!-- Conversion Rate -->
             <div class="bg-white dark:bg-background-dark p-6 rounded-xl border border-border-warm dark:border-white/5 shadow-sm group hover:shadow-md transition-shadow">
                 <div class="flex justify-between items-start mb-4">
                     <div>
-                        <p class="text-sm font-medium text-muted-warm">Conversion Rate</p>
+                        <p class="text-sm font-medium text-muted-warm">Taux de conversion</p>
                         <h3 class="text-2xl font-bold mt-1">3.2%</h3>
                     </div>
                     <span class="p-2 bg-purple-100 text-purple-600 rounded-lg material-symbols-outlined">ads_click</span>
@@ -79,13 +79,13 @@
             <div class="xl:col-span-2 bg-white dark:bg-background-dark rounded-xl border border-border-warm dark:border-white/5 p-8 shadow-sm">
                 <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8">
                     <div>
-                        <h2 class="text-lg font-bold">Sales Overview</h2>
-                        <p class="text-sm text-muted-warm font-medium">Revenue generated over the last 30 days</p>
+                        <h2 class="text-lg font-bold">Aperçu des ventes</h2>
+                        <p class="text-sm text-muted-warm font-medium">Revenus générés au cours des 30 derniers jours</p>
                     </div>
                     <div class="flex items-center bg-background-light dark:bg-white/5 rounded-lg p-1">
-                        <button class="px-4 py-1.5 text-xs font-bold rounded-md bg-white dark:bg-background-dark shadow-sm">30 Days</button>
-                        <button class="px-4 py-1.5 text-xs font-medium text-muted-warm">90 Days</button>
-                        <button class="px-4 py-1.5 text-xs font-medium text-muted-warm">Year</button>
+                        <button class="px-4 py-1.5 text-xs font-bold rounded-md bg-white dark:bg-background-dark shadow-sm">30 jours</button>
+                        <button class="px-4 py-1.5 text-xs font-medium text-muted-warm">90 Jours</button>
+                        <button class="px-4 py-1.5 text-xs font-medium text-muted-warm">Annee</button>
                     </div>
                 </div>
                 <div class="relative h-[300px] w-full mt-4">
@@ -120,15 +120,15 @@
             <!-- Recent Activity Feed -->
             <div class="bg-white dark:bg-background-dark rounded-xl border border-border-warm dark:border-white/5 p-6 shadow-sm overflow-hidden">
                 <div class="flex items-center justify-between mb-6">
-                    <h2 class="text-lg font-bold">Recent Activity</h2>
-                    <button class="text-primary text-xs font-bold hover:underline">View All</button>
+                    <h2 class="text-lg font-bold">Activité récente</h2>
+                    <button class="text-primary text-xs font-bold hover:underline">Afficher tout</button>
                 </div>
                 <div class="flex flex-col gap-6">
                     <!-- Activity Item 1 -->
                     <div class="flex gap-4">
                         <div class="w-10 h-10 rounded-full bg-cover bg-center shrink-0 border border-border-warm" data-alt="Customer avatar for activity feed" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBoeCarhh6ddYDix0eT_1kxbHRuXeBba0tqtBrbJoHqyJROTrQXfPT66yVSmX9S22UquI5NQz7nzCOPBHK4kNmI6JCfwRW_cDlmH_aRjcNe1_68CAbZsKpYnNUNPFIyUvKkCwIOsyDQGAavnNS-9C_qDiAuBtEk7IcZpiv5a2R6R5Vb3CZdio8frLgy8vho_QO13yzPBC93tcVq3T-B4aV8JO9NwpqTAYTXo_C6cuwIwSNjtXTxREQtojCW9JMc4vCoRQPeMRM')"></div>
                         <div class="flex flex-col gap-0.5">
-                            <p class="text-sm font-medium"><span class="font-bold">John Doe</span> placed an order <span class="font-bold text-primary">#ORD-9021</span></p>
+                            <p class="text-sm font-medium"><span class="font-bold">John Doe</span> a passé une commande <span class="font-bold text-primary">#ORD-9021</span></p>
                             <p class="text-xs text-muted-warm">2 minutes ago</p>
                         </div>
                     </div>
@@ -138,8 +138,8 @@
                             <span class="material-symbols-outlined text-sm">person_add</span>
                         </div>
                         <div class="flex flex-col gap-0.5">
-                            <p class="text-sm font-medium"><span class="font-bold">New user</span> registered from <span class="font-bold">San Francisco, CA</span></p>
-                            <p class="text-xs text-muted-warm">15 minutes ago</p>
+                            <p class="text-sm font-medium"><span class="font-bold">Nouvel utilisateur</span> enregistré depuis <span class="font-bold">San Francisco, CA</span></p>
+                            <p class="text-xs text-muted-warm">Il y a 15 minutes</p>
                         </div>
                     </div>
                     <!-- Activity Item 3 -->
@@ -148,16 +148,16 @@
                             <span class="material-symbols-outlined text-sm">assignment_return</span>
                         </div>
                         <div class="flex flex-col gap-0.5">
-                            <p class="text-sm font-medium">Refund processed for <span class="font-bold text-red-500">#ORD-1104</span></p>
-                            <p class="text-xs text-muted-warm">1 hour ago</p>
+                            <p class="text-sm font-medium">Remboursement traité pour <span class="font-bold text-red-500">#ORD-1104</span></p>
+                            <p class="text-xs text-muted-warm">il y a 1 heure</p>
                         </div>
                     </div>
                     <!-- Activity Item 4 -->
                     <div class="flex gap-4">
                         <div class="w-10 h-10 rounded-full bg-cover bg-center shrink-0 border border-border-warm" data-alt="Staff avatar for activity feed" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBPhCmJScP2mQn3XRTHlPOO9WzTVprz0JNEzOzEbquGIuLQ-7oB8FI6niB3H6l73bbjuR84B4mlTz70Bdxdo69zUeVpy4i1QcHqdIdhTGJOpFP6R49vFZXaWK1bNCcQmd0Ha0uSQGHFzzVj4HLcCxJT8cSvvyjgkC1dey86rvgpP4z8ES72qSjDB57oyBrs2LRZekxe0hFew8pCbpmacns2_qwhVx7DiGGXghtqNM0fGzdPk98cIG-Q0Eu7Mhuiti5r6QlgEBk')"></div>
                         <div class="flex flex-col gap-0.5">
-                            <p class="text-sm font-medium"><span class="font-bold">Sarah Chen</span> updated inventory for <span class="font-bold">Summer Collection</span></p>
-                            <p class="text-xs text-muted-warm">4 hours ago</p>
+                            <p class="text-sm font-medium"><span class="font-bold">Sarah Chen</span>inventaire mis à jour pour <span class="font-bold">Collection d'été</span></p>
+                            <p class="text-xs text-muted-warm">il y a 4 heures</p>
                         </div>
                     </div>
                 </div>
@@ -210,15 +210,15 @@
             <!-- Monthly Orders Comparison (Bar) -->
             <div class="bg-white dark:bg-background-dark rounded-xl border border-border-warm dark:border-white/5 p-8 shadow-sm">
                 <div class="flex justify-between items-center mb-8">
-                    <h2 class="text-lg font-bold">Monthly Orders Comparison</h2>
+                    <h2 class="text-lg font-bold">Comparaison des commandes mensuelles</h2>
                     <div class="flex gap-4">
                         <div class="flex items-center gap-2">
                             <span class="w-2.5 h-2.5 rounded-full bg-primary"></span>
-                            <span class="text-xs font-medium">This Month</span>
+                            <span class="text-xs font-medium">Ce mois-ci</span>
                         </div>
                         <div class="flex items-center gap-2">
                             <span class="w-2.5 h-2.5 rounded-full bg-charcoal"></span>
-                            <span class="text-xs font-medium">Last Month</span>
+                            <span class="text-xs font-medium">Mois dernier</span>
                         </div>
                     </div>
                 </div>

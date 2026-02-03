@@ -8,26 +8,26 @@
             </div>
             <div class="flex flex-col">
                 <h1 class="text-[#181411] dark:text-white text-base font-bold leading-normal"><?= $_SESSION["user"]['nom'] ?></h1>
-                <p class="text-[#897261] dark:text-gray-400 text-xs font-normal">Super User</p>
+                <p class="text-[#897261] dark:text-gray-400 text-xs font-normal">Super utilisateur</p>
             </div>
         </div>
         <!-- Nav Links -->
         <nav class="flex flex-col gap-1 grow">
             <a href="/admin" class="flex items-center gap-3 px-3 py-2.5 cursor-pointer rounded-lg <?= isset($router->matchname) && $router->matchname === 'admin' ? 'bg-primary text-white' : 'text-[#181411] hover:bg-background-light'  ?> ">
                 <span class="material-symbols-outlined text-xl">dashboard</span>
-                <p class="text-sm font-medium">Dashboard</p>
+                <p class="text-sm font-medium">tableau de bord</p>
             </a>
             <a href="/admin/orders" class="flex items-center gap-3 px-3 py-2.5 rounded-lg cursor-pointer <?= isset($router->matchname) && $router->matchname === 'admin/orders' ? 'bg-primary text-white' : 'text-[#181411] hover:bg-background-light'  ?> ">
                 <span class="material-symbols-outlined text-xl">shopping_cart</span>
-                <p class="text-sm font-medium">Orders</p>
+                <p class="text-sm font-medium">Ordres</p>
             </a>
             <a href="/admin/customers" class="flex items-center gap-3 px-3 py-2.5 cursor-pointer rounded-lg <?= isset($router->matchname) && $router->matchname === 'admin/customers' ? 'bg-primary text-white' : 'text-[#181411] hover:bg-background-light'  ?> ">
                 <span class="material-symbols-outlined text-xl">group</span>
-                <p class="text-sm font-medium">Customers</p>
+                <p class="text-sm font-medium">Client</p>
             </a>
             <a href="/admin/product" class="flex items-center gap-3 px-3 py-2.5 cursor-pointer rounded-lg <?= isset($router->matchname) && $router->matchname === 'admin/Products' ? 'bg-primary text-white' : 'text-[#181411] hover:bg-background-light'  ?> ">
                 <span class="material-symbols-outlined text-xl">inventory_2</span>
-                <p class="text-sm font-medium">Products</p>
+                <p class="text-sm font-medium">Produits</p>
             </a>
             <a href="/admin/components" class="flex items-center gap-3 px-3 py-2.5 cursor-pointer rounded-lg <?= isset($router->matchname) && $router->matchname === 'admin/components' ? 'bg-primary text-white' : 'text-[#181411] hover:bg-background-light'  ?> ">
                 <span class="material-symbols-outlined text-xl">Cards</span>
@@ -42,11 +42,11 @@
         <div class="flex flex-col gap-1 border-t border-[#e6e0db] dark:border-white/10 pt-4">
             <div class="flex items-center gap-3 px-3 py-2.5 cursor-pointer rounded-lg hover:bg-background-light dark:hover:bg-white/5 text-[#181411] dark:text-gray-300">
                 <span class="material-symbols-outlined text-xl">settings</span>
-                <p class="text-sm font-medium">Settings</p>
+                <p class="text-sm font-medium">paramètres</p>
             </div>
             <a href="/logout" class="flex items-center gap-3 px-3 py-2.5 cursor-pointer rounded-lg hover:bg-background-light dark:hover:bg-white/5 text-[#e71008]">
                 <span class="material-symbols-outlined text-xl">logout</span>
-                <p class="text-sm font-medium">Sign Out</p>
+                <p class="text-sm font-medium">Se Deconnecter</p>
             </a>
         </div>
     </div>

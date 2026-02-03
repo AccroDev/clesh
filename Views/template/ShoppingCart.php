@@ -19,12 +19,12 @@ $grandTotal = $subtotal + $shipping + $tax;
         <div class="lg:col-span-2 flex flex-col gap-6">
             <div class="flex flex-wrap justify-between items-end gap-3 pb-4">
                 <div class="flex flex-col gap-2">
-                    <h1 class="text-[#181411] dark:text-white text-4xl font-black leading-tight tracking-[-0.033em]">Your Shopping Bag</h1>
+                    <h1 class="text-[#181411] dark:text-white text-4xl font-black leading-tight tracking-[-0.033em]">Votre sac de courses</h1>
                     <p class="text-[#897261] dark:text-[#a59182] text-base font-normal">
-                        <?= $totalCount ?> <?= $totalCount > 1 ? 'items' : 'item' ?> in your cart
+                        <?= $totalCount ?> <?= $totalCount > 1 ? 'items' : 'item' ?> dans votre panier
                     </p>
                 </div>
-                <a class="text-primary text-sm font-bold underline hover:no-underline" href="/products">Continue Shopping</a>
+                <a class="text-primary text-sm font-bold underline hover:no-underline" href="/products">Continuer vos achats</a>
             </div>
 
             <div class="@container">
@@ -32,9 +32,9 @@ $grandTotal = $subtotal + $shipping + $tax;
                     <table class="w-full text-left border-collapse">
                         <thead>
                             <tr class="bg-white dark:bg-[#2d2118] border-b border-[#e6e0db] dark:border-[#3d2e24]">
-                                <th class="px-6 py-4 text-[#181411] dark:text-white text-xs font-bold uppercase tracking-wider">Product</th>
-                                <th class="px-6 py-4 text-[#181411] dark:text-white text-xs font-bold uppercase tracking-wider hidden sm:table-cell text-center">Quantity</th>
-                                <th class="px-6 py-4 text-[#181411] dark:text-white text-xs font-bold uppercase tracking-wider text-right">Price</th>
+                                <th class="px-6 py-4 text-[#181411] dark:text-white text-xs font-bold uppercase tracking-wider">Produits</th>
+                                <th class="px-6 py-4 text-[#181411] dark:text-white text-xs font-bold uppercase tracking-wider hidden sm:table-cell text-center">Quantite</th>
+                                <th class="px-6 py-4 text-[#181411] dark:text-white text-xs font-bold uppercase tracking-wider text-right">Prix</th>
                                 <th class="px-6 py-4 text-[#897261] dark:text-[#a59182] text-xs font-bold uppercase tracking-wider text-right">Action</th>
                             </tr>
                         </thead>
@@ -72,7 +72,7 @@ $grandTotal = $subtotal + $shipping + $tax;
                                         </td>
                                         <td class="px-6 py-6 text-right">
                                             <button class="text-[#897261] hover:text-red-500 transition-colors js-delete-btn" data-id="<?= $item['product_id'] ?>">
-                                                <span class="material-symbols-outlined">delete</span>
+                                                <span class="material-symbols-outlined">Supprimer</span>
                                             </button>
                                         </td>
                                     </tr>
@@ -80,7 +80,7 @@ $grandTotal = $subtotal + $shipping + $tax;
                             <?php else: ?>
                                 <tr>
                                     <td colspan="4" class="px-6 py-20 text-center text-[#897261]">
-                                        Your bag is empty. <a href="/products" class="text-primary underline">Start shopping</a>
+                                        Votre sac est vide. <a href="/products" class="text-primary underline">Commencez vos achats</a>
                                     </td>
                                 </tr>
                             <?php endif; ?>
@@ -92,18 +92,18 @@ $grandTotal = $subtotal + $shipping + $tax;
 
         <aside class="flex flex-col gap-6 lg:sticky lg:top-24">
             <div class="rounded-xl border border-[#e6e0db] dark:border-[#3d2e24] bg-white dark:bg-[#2d2118] p-6 shadow-sm">
-                <h2 class="text-[#181411] dark:text-white text-xl font-bold leading-tight tracking-[-0.015em] pb-6 border-b border-[#f4f2f0] dark:border-[#3d2e24]">Order Summary</h2>
+                <h2 class="text-[#181411] dark:text-white text-xl font-bold leading-tight tracking-[-0.015em] pb-6 border-b border-[#f4f2f0] dark:border-[#3d2e24]">Résumé de la commande</h2>
                 <div class="py-4 space-y-4">
                     <div class="flex justify-between items-center">
                         <p class="text-[#897261] dark:text-[#a59182] text-sm font-normal">Subtotal</p>
                         <p class="text-[#181411] dark:text-white text-sm font-bold"><?= $devise . number_format($subtotal, 2) ?></p>
                     </div>
                     <div class="flex justify-between items-center">
-                        <p class="text-[#897261] dark:text-[#a59182] text-sm font-normal">Estimated Shipping</p>
+                        <p class="text-[#897261] dark:text-[#a59182] text-sm font-normal">Livraison estimée</p>
                         <p class="text-[#181411] dark:text-white text-sm font-bold"><?= $devise . number_format($shipping, 2) ?></p>
                     </div>
                     <div class="flex justify-between items-center">
-                        <p class="text-[#897261] dark:text-[#a59182] text-sm font-normal">Estimated Tax</p>
+                        <p class="text-[#897261] dark:text-[#a59182] text-sm font-normal">Impôt estimé</p>
                         <p class="text-[#181411] dark:text-white text-sm font-bold"><?= $devise . number_format($tax, 2) ?></p>
                     </div>
                     <div class="pt-4 mt-4 border-t border-[#f4f2f0] dark:border-[#3d2e24] flex justify-between items-center">
@@ -112,20 +112,20 @@ $grandTotal = $subtotal + $shipping + $tax;
                     </div>
                 </div>
                 <a href="/commander" class="w-full mt-4 flex items-center justify-center gap-2 cursor-pointer rounded-lg h-12 bg-primary text-white text-base font-bold hover:bg-opacity-90 transition-all shadow-lg shadow-primary/20 disabled:opacity-50 disabled:cursor-not-allowed" <?= $totalCount === 0 ? 'disabled' : '' ?>>
-                    <span>Proceed to Checkout</span>
+                    <span>Passer à la caisse</span>
                     <span class="material-symbols-outlined">arrow_forward</span>
             </a>
                 <div class="mt-6 flex items-center justify-center gap-2 text-[#897261] dark:text-[#a59182] text-xs">
                     <span class="material-symbols-outlined text-[16px]">lock</span>
-                    <span>Secure SSL Encrypted Checkout</span>
+                    <span>Paiement sécurisé par cryptage SSL</span>
                 </div>
             </div>
 
             <div class="rounded-xl bg-primary/10 dark:bg-primary/5 p-4 border border-primary/20">
-                <p class="text-primary font-bold text-sm mb-1">Promo Code?</p>
+                <p class="text-primary font-bold text-sm mb-1">Code promo?</p>
                 <div class="flex gap-2">
                     <input class="form-input flex-1 rounded-lg border-[#e6e0db] dark:border-[#3d2e24] bg-white dark:bg-[#221810] text-sm focus:ring-primary focus:border-primary px-3 py-2" placeholder="Enter code" />
-                    <button class="px-4 py-2 bg-white dark:bg-[#3d2e24] text-[#181411] dark:text-white text-xs font-bold rounded-lg border border-[#e6e0db] dark:border-[#3d2e24] hover:bg-gray-50 dark:hover:bg-[#4d3b2e] transition-colors">Apply</button>
+                    <button class="px-4 py-2 bg-white dark:bg-[#3d2e24] text-[#181411] dark:text-white text-xs font-bold rounded-lg border border-[#e6e0db] dark:border-[#3d2e24] hover:bg-gray-50 dark:hover:bg-[#4d3b2e] transition-colors">Appliquer</button>
                 </div>
             </div>
         </aside>

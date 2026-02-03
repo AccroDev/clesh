@@ -12,17 +12,17 @@
                  <!-- Page Heading -->
                  <div class="flex flex-wrap justify-between items-end gap-4 mb-8">
                      <div class="flex flex-col gap-2">
-                         <h2 class="text-[#181411] dark:text-white text-3xl font-black tracking-tight">Orders Management</h2>
-                         <p class="text-[#897261] dark:text-gray-400 text-sm">Review, track, and manage all your customer transactions in one interface.</p>
+                         <h2 class="text-[#181411] dark:text-white text-3xl font-black tracking-tight">Gestion des commandes</h2>
+                         <p class="text-[#897261] dark:text-gray-400 text-sm">Consultez, suivez et gérez toutes les transactions de vos clients depuis une seule interface.</p>
                      </div>
                      <div class="flex gap-3">
                          <button class="flex items-center gap-2 px-4 py-2 bg-white dark:bg-white/10 border border-[#e6e0db] dark:border-white/10 rounded-lg text-[#181411] dark:text-white text-sm font-bold shadow-sm hover:bg-gray-50 transition-colors">
                              <span class="material-symbols-outlined text-lg">file_download</span>
-                             Export CSV
+                            Exporter au format CSV
                          </button>
                          <button class="flex items-center gap-2 px-4 py-2 bg-primary rounded-lg text-white text-sm font-bold shadow-sm hover:bg-opacity-90 transition-colors">
                              <span class="material-symbols-outlined text-lg">add</span>
-                             Create Order
+                            Créer une commande
                          </button>
                      </div>
                  </div>
@@ -30,7 +30,7 @@
                  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                      <div class="bg-white dark:bg-white/5 border border-[#e6e0db] dark:border-white/10 rounded-xl p-6 flex flex-col gap-2 shadow-sm">
                          <div class="flex justify-between items-start">
-                             <p class="text-[#897261] dark:text-gray-400 text-sm font-medium uppercase tracking-wider">Total Orders</p>
+                             <p class="text-[#897261] dark:text-gray-400 text-sm font-medium uppercase tracking-wider">Commandes totales</p>
                              <span class="material-symbols-outlined text-primary">shopping_bag</span>
                          </div>
                          <p class="text-[#181411] dark:text-white text-3xl font-black">1,284</p>
@@ -41,13 +41,13 @@
                      </div>
                      <div class="bg-white dark:bg-white/5 border border-[#e6e0db] dark:border-white/10 rounded-xl p-6 flex flex-col gap-2 shadow-sm">
                          <div class="flex justify-between items-start">
-                             <p class="text-[#897261] dark:text-gray-400 text-sm font-medium uppercase tracking-wider">Pending Orders</p>
+                             <p class="text-[#897261] dark:text-gray-400 text-sm font-medium uppercase tracking-wider">Commandes en attente</p>
                              <span class="material-symbols-outlined text-primary">schedule</span>
                          </div>
                          <p class="text-[#181411] dark:text-white text-3xl font-black">42</p>
                          <div class="flex items-center gap-1 text-[#07880e] text-xs font-bold">
                              <span class="material-symbols-outlined text-sm">trending_up</span>
-                             +5.2% since yesterday
+                             +5,2 % depuis hier
                          </div>
                      </div>
                      <div class="bg-white dark:bg-white/5 border border-[#e6e0db] dark:border-white/10 rounded-xl p-6 flex flex-col gap-2 shadow-sm">

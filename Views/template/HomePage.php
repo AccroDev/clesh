@@ -4,20 +4,20 @@
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center bg-white dark:bg-[#2c1f15] rounded-3xl overflow-hidden shadow-sm border border-[#f4f2f0] dark:border-[#3d2e21]">
             <div class="p-8 lg:p-16 flex flex-col gap-8 order-2 lg:order-1">
                 <div class="flex flex-col gap-4">
-                    <span class="text-primary font-bold tracking-widest text-xs uppercase">New Season Essentials</span>
+                    <span class="text-primary font-bold tracking-widest text-xs uppercase">Nouvelle saison essentielle </span>
                     <h1 class="text-4xl lg:text-6xl font-black leading-tight tracking-tight text-[#181411] dark:text-white">
-                        Curated Essentials for Modern Living
+                        Des essentiels soigneusement sélectionnés pour une vie moderne
                     </h1>
                     <p class="text-[#5e4b3c] dark:text-[#c4b5a8] text-lg leading-relaxed max-w-md">
-                        Our pieces are sourced from sustainable artisans to bring warmth, character, and tranquility to your home.
+                        Nos articles proviennent d'artisans engagés dans une démarche durable et apportent chaleur, caractère et sérénité à votre intérieur.
                     </p>
                 </div>
                 <div class="flex flex-wrap gap-4">
                     <button class="h-14 px-8 bg-primary text-white font-bold rounded-xl hover:shadow-lg hover:shadow-primary/20 transition-all flex items-center gap-2">
-                        Explore Collection <span class="material-symbols-outlined">arrow_forward</span>
+                        Explorer la Collection <span class="material-symbols-outlined">arrow_forward</span>
                     </button>
                     <button class="h-14 px-8 border-2 border-[#181411] dark:border-[#f4f2f0] text-[#181411] dark:text-[#f4f2f0] font-bold rounded-xl hover:bg-[#181411] hover:text-white dark:hover:bg-white dark:hover:text-[#181411] transition-all">
-                        Our Story
+                        Notre hystorique
                     </button>
                 </div>
             </div>
@@ -29,10 +29,10 @@
     <div class="px-6 lg:px-10 mt-12 flex items-end justify-between">
         <div class="flex flex-col gap-1">
             <div class="h-1 w-12 bg-primary rounded-full"></div>
-            <h2 class="text-2xl lg:text-3xl font-bold tracking-tight pt-2">Popular Articles</h2>
+            <h2 class="text-2xl lg:text-3xl font-bold tracking-tight pt-2">Les Articles Polpulaires</h2>
         </div>
         <a class="text-primary text-sm font-bold flex items-center gap-1 hover:underline" href="#">
-            View all items <span class="material-symbols-outlined text-sm">open_in_new</span>
+            Afficher tous les articles <span class="material-symbols-outlined text-sm">Open_in_New</span>
         </a>
     </div>
     <!-- Product Grid -->
@@ -43,7 +43,7 @@
                 <div class="relative w-full aspect-[4/5] bg-center bg-no-repeat bg-cover rounded-2xl overflow-hidden" data-alt="Minimalist beige ceramic vase on a wooden table" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBj0ZYoeaOS0pcZll0If5ARgWEYieMFhXTNetNptNHEdcMQlUQQzuQsFh9a3d2Bhs4QoMNDVWoGoczJjmQzprDMn725w9FgzDJ-A2OhgCkCulrHjQdgQ_560LNRe8RrhFElu0H42YBAb-sXj8LqL6OykbrjvHfLtAioEOlUKlvUY0i_b1q-ZdeWxS2ZDpolHg_VCbaRPcRggr6NivUCN_jVcwdCEfpzwCMQJ8JLIwycHJVL3tOYMoyTLpKAExFhSn3QNRaCVWE");'>
                     <div class="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
                         <button class="w-full h-11 bg-white text-[#181411] font-bold rounded-lg shadow-xl translate-y-2 group-hover:translate-y-0 transition-all flex items-center justify-center gap-2">
-                            <span class="material-symbols-outlined text-sm">shopping_bag</span> Add to Cart
+                            <span class="material-symbols-outlined text-sm">sac de courses</span> Ajouter au panier
                         </button>
                     </div>
                 </div>

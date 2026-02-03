@@ -25,7 +25,7 @@ $cartBase = Getter::get("carts", ["id" => $id]);
         
         <nav class="flex flex-wrap items-center gap-2 px-4 py-2 bg-white/50 dark:bg-white/5 rounded-xl backdrop-blur-sm">
             <a class="text-primary hover:underline text-sm font-medium flex items-center gap-1" href="/admin">
-                <span class="material-symbols-outlined text-sm">home</span> Admin
+                <span class="material-symbols-outlined text-sm">Acceil</span> Admin
             </a>
             <span class="text-[#897261] text-sm">/</span>
             <a class="text-primary hover:underline text-sm font-medium" href="/admin/orders">Orders</a>
@@ -35,9 +35,9 @@ $cartBase = Getter::get("carts", ["id" => $id]);
 
         <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 px-4">
             <div>
-                <h1 class="text-[#181411] dark:text-white tracking-tight text-[32px] font-bold leading-tight">Order Details</h1>
+                <h1 class="text-[#181411] dark:text-white tracking-tight text-[32px] font-bold leading-tight">Détails de la commande</h1>
                 <p class="text-[#897261] text-sm italic">
-                    Placed on <?= isset($cartBase['created_at']) ? date('F j, Y \a\t g:i A', strtotime($cartBase['created_at'])) : 'Unknown date' ?>
+                   Placé sur <?= isset($cartBase['created_at']) ? date('F j, Y \a\t g:i A', strtotime($cartBase['created_at'])) : 'Unknown date' ?>
                 </p>
             </div>
         </div>
@@ -45,22 +45,22 @@ $cartBase = Getter::get("carts", ["id" => $id]);
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 px-4">
             <div class="flex flex-col gap-2 rounded-xl p-6 bg-white dark:bg-[#2d2218] border border-[#e6e0db] dark:border-[#3d3228] shadow-sm">
                 <div class="flex items-center gap-2 text-[#897261]">
-                    <span class="material-symbols-outlined text-xl text-primary">payments</span>
-                    <p class="text-sm font-medium uppercase tracking-tighter">Total Amount</p>
+                    <span class="material-symbols-outlined text-xl text-primary">paiements</span>
+                    <p class="text-sm font-medium uppercase tracking-tighter">Montant total</p>
                 </div>
                 <p class="text-[#181411] dark:text-white text-2xl font-black italic"><?= number_format($total, 2) ?> <?= $devise ?></p>
             </div>
             <div class="flex flex-col gap-2 rounded-xl p-6 bg-white dark:bg-[#2d2218] border border-[#e6e0db] dark:border-[#3d3228] shadow-sm">
                 <div class="flex items-center gap-2 text-[#897261]">
                     <span class="material-symbols-outlined text-xl">currency_exchange</span>
-                    <p class="text-sm font-medium uppercase tracking-tighter">Currency</p>
+                    <p class="text-sm font-medium uppercase tracking-tighter">Devise</p>
                 </div>
                 <p class="text-[#181411] dark:text-white text-2xl font-bold uppercase"><?= $devise === '$' ? 'USD' : 'EUR' ?></p>
             </div>
             <div class="flex flex-col gap-2 rounded-xl p-6 bg-white dark:bg-[#2d2218] border border-[#e6e0db] dark:border-[#3d3228] shadow-sm">
                 <div class="flex items-center gap-2 text-[#897261]">
                     <span class="material-symbols-outlined text-xl">shopping_basket</span>
-                    <p class="text-sm font-medium uppercase tracking-tighter">Items Count</p>
+                    <p class="text-sm font-medium uppercase tracking-tighter">Nombre d'articles</p>
                 </div>
                 <p class="text-[#181411] dark:text-white text-2xl font-bold"><?= count($items) ?> Units</p>
             </div>

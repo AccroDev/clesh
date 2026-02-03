@@ -9,11 +9,11 @@
  <main class="flex-grow max-w-400 mx-auto w-full px-6 md:px-20 lg:px-40 py-8">
      <!-- Breadcrumbs -->
      <nav class="flex flex-wrap gap-2 mb-6">
-         <a class="text-[#897261] dark:text-gray-400 text-sm font-medium hover:text-primary transition-colors" href="#">Home</a>
+         <a class="text-[#897261] dark:text-gray-400 text-sm font-medium hover:text-primary transition-colors" href="/">Acceil</a>
          <span class="text-[#897261] text-sm">/</span>
-         <a class="text-[#897261] dark:text-gray-400 text-sm font-medium hover:text-primary transition-colors" href="#">Shop</a>
+         <a class="text-[#897261] dark:text-gray-400 text-sm font-medium hover:text-primary transition-colors" href="/products">Boutique</a>
          <span class="text-[#897261] text-sm">/</span>
-         <span class="text-primary text-sm font-semibold">All Products</span>
+         <span class="text-primary text-sm font-semibold">tous les Produits</span>
      </nav>
      <div class="flex flex-col lg:flex-row gap-8">
          <!-- Sidebar Navigation (Filters) -->
@@ -25,9 +25,9 @@
                      <label class="flex flex-col w-full">
                          <div class="flex w-full items-stretch rounded-lg h-10">
                              <div class="text-[#897261] flex bg-[#f4f2f0] dark:bg-white/10 items-center justify-center px-3 rounded-l-lg">
-                                 <span class="material-symbols-outlined text-xl">search</span>
+                                 <span class="material-symbols-outlined text-xl"></span>
                              </div>
-                             <input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-r-lg text-[#181411] dark:text-white focus:outline-0 focus:ring-1 focus:ring-primary border-none bg-[#f4f2f0] dark:bg-white/10 px-3 text-sm font-normal" placeholder="Search furniture..." />
+                             <input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-r-lg text-[#181411] dark:text-white focus:outline-0 focus:ring-1 focus:ring-primary border-none bg-[#f4f2f0] dark:bg-white/10 px-3 text-sm font-normal" placeholder="Recherche furniture..." />
                          </div>
                      </label>
                  </div>
@@ -40,7 +40,7 @@
                          <div class="flex items-center justify-between px-3 py-2 rounded-lg bg-primary/10 text-primary cursor-pointer">
                              <div class="flex items-center gap-3">
                                  <span class="material-symbols-outlined text-xl">grid_view</span>
-                                 <span class="text-sm font-semibold">All Items</span>
+                                 <span class="text-sm font-semibold">Tous les Articles</span>
                              </div>
                              <span class="text-xs font-bold">42</span>
                          </div>
@@ -54,7 +54,7 @@
                          <div class="flex items-center justify-between px-3 py-2 rounded-lg hover:bg-background-light dark:hover:bg-white/5 transition-colors cursor-pointer">
                              <div class="flex items-center gap-3">
                                  <span class="material-symbols-outlined text-xl">light</span>
-                                 <span class="text-sm font-medium">Lighting</span>
+                                 <span class="text-sm font-medium">Éclairage</span>
                              </div>
                              <span class="text-xs text-[#897261]">12</span>
                          </div>
@@ -69,7 +69,7 @@
                  </div>
                  <!-- Price Range Slider -->
                  <div>
-                     <h3 class="text-sm font-bold uppercase tracking-wider text-[#897261] mb-4">Price Range</h3>
+                     <h3 class="text-sm font-bold uppercase tracking-wider text-[#897261] mb-4">Gamme de prix</h3>
                      <div class="px-2">
                          <div class="relative h-1.5 w-full bg-[#f4f2f0] dark:bg-white/10 rounded-full">
                              <div class="absolute h-full w-2/3 bg-primary rounded-full left-0"></div>
@@ -139,7 +139,7 @@
                              </p>
 
                              <a href="/product/<?= str_replace(" ","-",$product['nom']) . '-' . $product['id'] ?>" class="mt-auto w-full py-2.5 bg-primary text-white text-sm font-bold rounded-lg hover:bg-primary/90 transition-colors flex items-center justify-center gap-2">
-                                 View Details
+                                 Voir les détails
                              </a>
                          </div>
                      </div>
